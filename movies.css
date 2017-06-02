@@ -1,5 +1,8 @@
+html {
+	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-48Qi5X8XR-u1zQgA0JH_v42Fa9Yq2O82a__lr1OBaPVD6PRqpw);
+}
 body {
-	background: rgba(150,255,150,0.2) url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-48Qi5X8XR-u1zQgA0JH_v42Fa9Yq2O82a__lr1OBaPVD6PRqpw);
+	background: rgba(150,255,150,0.2);
 }
 div.panel-title {
 	text-align:center;
