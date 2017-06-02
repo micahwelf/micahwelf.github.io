@@ -8,8 +8,10 @@ div.panel-title {
 	text-align:center;
 }
 div.panel-title + div {
-	color: rgba(100,100,100,0.9);
+	color: rgba(100,100,100,0.99);
 	font-size: 1.7rem;
 	margin-bottom: 1ex;
 }
-
+#categories div {
+	background: rgba(200,200,180,0.9);
+}
