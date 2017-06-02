@@ -4,17 +4,141 @@
 	<meta charset="utf-8">
 	<title>Code School Projects</title>
 	<style>
+		html { height: 100%; }
+		h1, h2, p {
+			margin: 0;
+		}
+
 		body {
-			background: rgb(190,240,190);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			height: 100%;
+
+			/*background: rgb(190,240,190);*/
+			background-color: magenta;
+		}
+
+		.box {
+			background-color: rgb(240, 240, 240);
+			border: 1px solid black;
+
+			width: 55%;
+
+			margin-bottom: 35px; /* put it up a bit */
+			padding: 25px 55px;
+
+			z-index: 30;
+		}
+
+		header {
+			text-align: center;
+
+			border-bottom: 1px solid black;
+
+			padding-bottom: 10px;
+			margin-bottom: 40px;
+		}
+
+		header h1 {
+			margin-bottom: 5px;
+			font-size: 2.2em;
+		}
+
+		h2 {
+			border: 1px solid black;
+			display: inline-block;
+			background-color: rgb(235, 235, 235);
+
+			font-size: 1.4em;
+
+			padding: 10px 15px;
+			margin-bottom: 15px;
+		}
+
+		section {
+			margin-left: 15px;
+			margin-bottom: 20px;
+		}
+
+		section p {
+			margin-bottom: 7px;
+			font-size: 1.4em;
+		}
+
+		section a {
+			text-decoration: none;
+		}
+
+		.frog {
+			position: absolute;
+			background-image: url("http://www.pinkfrogservices.com/wp-content/uploads/2016/12/pinkfrog3d_wavingfinal001-LARGE-CLEAR.png");
+			background-size: contain;
+			min-width: 150px;
+			min-height: 200px;
+
+			-moz-transform: scaleY(-1);
+			-o-transform: scaleY(-1);
+			-webkit-transform: scaleY(-1);
+			transform: scaleY(-1);
+			filter: FlipV;
+			-ms-filter: "FlipV";
+
+			z-index: 0;
 		}
 	</style>
 </head>
 <body>
-	<h1>Magenta Frogs</h1>
-	<h2>Code School Projects</h2>
-	<br>
-	<h3><a href="form_activity/">Form beautification</a></h3>
-	<h3><a href="movie_page/">Favorite Movie(s)</a></h3>
-	<h3><a href="zen_garden/">Zen Garden Stylesheets</a></h3>
-	
+	<div class="box">
+		<header>
+			<h1>Magenta Frogs</h1>
+			<p>Micah, Page, Maryn, and Wes</p>
+		</header>
+
+		<h2>Code School Projects</h2>
+		<section>
+			<p><a href="form_activity/">Form beautification</a></p>
+			<p><a href="movie_page/">Favorite Movie(s)</a></p>
+			<p><a href="zen_garden/">Zen Garden Stylesheets</a></p>
+		</section>
+	</div>
+
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+	<div class="frog"></div>
+
+	<script>
+		for (let frog of document.getElementsByClassName("frog")) {
+			frog.style.left = `${Math.random() * window.innerWidth}px`;
+			frog.fallPos = -200 - (Math.random() * 100000) / 100;
+			frog.style.top = `${frog.fallPos}px`;
+		}
+
+		window.setTimeout(function() {
+			window.setInterval(function() {
+				for (let frog of document.getElementsByClassName("frog")) {
+					frog.fallPos += 2;
+
+					if (frog.fallPos > window.innerHeight) {
+						frog.fallPos = -300;
+						frog.style.left = `${Math.random() * window.innerWidth}px`;
+					}
+
+					frog.style.top = `${frog.fallPos}px`;
+				}
+			}, 5);
+		}, 3000);
+	</script>
 </body>
