@@ -1,0 +1,12 @@
+body {
+	background: rgba(150,255,150,0.2);
+}
+div.panel-title {
+	text-align:center;
+}
+div.panel-title + div {
+	color: rgba(100,100,100,0.9);
+	font-size: 1.7rem;
+	margin-bottom: 1ex;
+}
+
