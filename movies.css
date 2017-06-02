@@ -13,5 +13,6 @@ div.panel-title + div {
 	margin-bottom: 1ex;
 }
 #categories div {
-	background: rgba(255,245,210,0.9);
+	background: rgba(255,245,210,0.5);
+	virtical-align: middle;
 }
