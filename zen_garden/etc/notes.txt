@@ -1,0 +1,7 @@
+2-column layout
+	* left: links
+	* right: content
+
+colors
+	* magenta
+	* silver
