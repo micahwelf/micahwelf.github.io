@@ -15,8 +15,12 @@
 }
 
 [role="main"] {
-    
+    background: #ffd6b4;
 }
+
+.sidebar {
+	background: #eba5cd;
+
 
 /*  dark: 0d1c00   med: 2E590B   mid: 5F9730     Light: 9AD36B   Pale: CDF4AC */
 
