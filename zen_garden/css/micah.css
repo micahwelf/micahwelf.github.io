@@ -45,9 +45,12 @@ body, #zen-intro * {
 	margin-right: 1ex;
 }
 
-@media only screen and (max-width: 8in;) and (min-width:4in;) {
+@media only screen and (max-width: 8in) {
+	.sidebar:hover {
+		width: auto;
+	}
 	.sidebar {
-		width: 2in;
+		width: 1rem;
 	}
 }
 
