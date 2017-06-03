@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
-.page-wrapper {
-    
-}
 
 .intro {
     
@@ -17,10 +14,14 @@
 .kaushan {
 	font-family: 'Kaushan Script', cursive;
 }
-
+div.page-wrapper {
+	display:flex;
+	justify-content: space-between;
+}
 body#css-zen-garden {
 	display: flex;
 	background: rgba(12, 39, 63, 1);
+	margin: 0rem;
 }
 body#css-zen-garden * {
 	font-family: 'Kaushan Script', cursive;
@@ -31,11 +32,13 @@ body#css-zen-garden, section#zen-intro * {
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
 section#zen-intro {
+	order: 0;
 	margin: 1ex;
 	background: rgba(42, 78, 110, 1);
 }	
 
 .main#zen-supporting {
+	order: 2;
 	background: rgba(255, 214, 180, 0.9);
 	background: rgba(241, 180, 212, 0.8);
 	border-radius: 1rem 0rem 0rem 1rem;
@@ -50,6 +53,7 @@ section#zen-intro {
 
 
 aside.sidebar {
+	order: 1;
 /*	background: rgba(235, 165, 205, 0.9);*/
 	position: relative:
 	left: 0rem;
