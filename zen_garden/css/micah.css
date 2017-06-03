@@ -24,7 +24,7 @@ body#css-zen-garden {
 	margin: 0rem;
 }
 body#css-zen-garden * {
-	font-family: 'Kaushan Script', cursive;
+/*	font-family: 'Kaushan Script', cursive;*/
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
 body#css-zen-garden, section#zen-intro * {
