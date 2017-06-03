@@ -19,6 +19,7 @@
 }
 
 body {
+	display: flex;
 	background: rgba(12, 39, 63, 1);
 }
 body * {
@@ -51,9 +52,8 @@ body, #zen-intro * {
 aside.sidebar {
 /*	background: rgba(235, 165, 205, 0.9);*/
 	position: relative:
-	left: 0px;
+	left: 0rem;
 	width: 20rem;
-	
 	background: rgba(236, 241, 130, 0.8);
 	color: rgba(1, 9, 16, 1);
 	text-shadow: 1pt 1pt rgba(21, 0, 11, 0.7);
@@ -62,18 +62,19 @@ aside.sidebar {
 	margin-right: 1ex;
 }
 
-@media only screen and (any-hover) and (max-width: 30rem) {
+@media only screen and (any-hover) and (max-width: 60rem) {
 	aside.sidebar {
 		position: absolute;
-		width: 30rem;
-		left: -29rem;
+		width: 20rem;
+		left: -19rem;
 		overflow: hidden;
+		transition: left 0.8;
 	}
 	aside.sidebar * {
 		max-width: 0rem;
 	}
 	aside.sidebar:hover * {
-		max-width: 30rem;
+		max-width: 18rem;
 		
 	}
 	aside.sidebar:hover {
@@ -82,7 +83,18 @@ aside.sidebar {
 /*		overflow: visible;*/
 	}
 }
-
+/* TEST SCREENS WITHOUT A MOUSE (TABLETS, ETC), THEN
+   LATER CHANGE "(any-hover)" TO "not (any-hover>" */
+@media only screen and (any-hover) and (max-width: 60rem) {
+	aside.sidebar {
+		position: fixed;
+		float: left:
+	}
+	.main#zen-supporting {
+		position: fixed;
+		clear: none;
+	}
+}
 
 .rgba-primary-0 { color: rgba( 42, 78,110,1) }	/* Main Primary color */
 .rgba-primary-1 { color: rgba(174,203,228,1) }
