@@ -20,10 +20,16 @@ body {
 body, #zen-intro * {
 	color: rgba(255, 46, 95, 1);
 }
+#zen-intro {
+	margin: 1ex;
+	background: rgba(42, 78, 110, 1);
+}	
 
-[role="main"] {
+#zen-supporting {
 /*	background: rgba(255, 214, 180, 0.9);*/
-	background: rgba(241 180, 212, 0.8);
+	background: rgba(241, 180, 212, 0.8);
+}
+#zen-supporting * {
 	color: rgba(21, 0, 11, 1);
 }
 
