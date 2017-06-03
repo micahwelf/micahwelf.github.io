@@ -15,14 +15,34 @@
 }
 
 [role="main"] {
-    background: #ffd6b4;
+    background: rgba(255, 214, 180, 0.9);
 }
 
+
 .sidebar {
-	background: #eba5cd;
+	background: rgba(235, 165, 205, 0.9);
+}
 
 
 /*  dark: 0d1c00   med: 2E590B   mid: 5F9730     Light: 9AD36B   Pale: CDF4AC */
+
+.rgba-primary-0 { color: rgba( 44,136, 44,1) }	/* Main Primary color */
+.rgba-primary-1 { color: rgba(165,235,165,1) }
+.rgba-primary-2 { color: rgba( 96,190, 96,1) }
+.rgba-primary-3 { color: rgba( 10, 80, 10,1) } /* body */
+.rgba-primary-4 { color: rgba(  0, 25,  0,1) }
+
+.rgba-secondary-1-0 { color: rgba(136, 44, 96,1) }	/* Main Secondary color (1) */
+.rgba-secondary-1-1 { color: rgba(235,165,205,1) } /* sidebar */
+.rgba-secondary-1-2 { color: rgba(190, 96,149,1) }
+.rgba-secondary-1-3 { color: rgba( 80, 10, 49,1) }
+.rgba-secondary-1-4 { color: rgba( 25,  0, 14,1) }
+
+.rgba-secondary-2-0 { color: rgba(170,107, 54,1) }	/* Main Secondary color (2) */
+.rgba-secondary-2-1 { color: rgba(255,214,180,1) } /* main */
+.rgba-secondary-2-2 { color: rgba(237,173,120,1) }
+.rgba-secondary-2-3 { color: rgba( 99, 52, 12,1) }
+.rgba-secondary-2-4 { color: rgba( 31, 14,  0,1) }
 
 
 
