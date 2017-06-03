@@ -59,6 +59,12 @@ body, #zen-intro * {
 		width: 30rem;
 		overflow: hidden;
 	}
+	.sidebar * {
+		max-width: 0rem;
+	}
+	.sidebar:hover * {
+		max-width: 30rem;
+	}
 	.sidebar:hover {
 		position: absolute;
 		left: -29rem;
