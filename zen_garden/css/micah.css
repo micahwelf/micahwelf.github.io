@@ -28,6 +28,8 @@ body, #zen-intro * {
 #zen-supporting {
 /*	background: rgba(255, 214, 180, 0.9);*/
 	background: rgba(241, 180, 212, 0.8);
+	border-radius: 1rem 0rem 0rem 1rem;
+	margin-left: 1rem;
 }
 #zen-supporting * {
 	color: rgba(21, 0, 11, 1);
@@ -40,7 +42,15 @@ body, #zen-intro * {
 	background: rgba(236, 241, 130, 0.8);
 	color: rgba(1, 9, 16, 1);
 	border-radius: 0rem 1rem 1rem 0rem;
+	margin-right: 1ex;
 }
+
+@media only screen and (max-width: 8in;) and (min-width:4in;) {
+	.sidebar {
+		width: 2in;
+	}
+}
+
 
 .rgba-primary-0 { color: rgba( 42, 78,110,1) }	/* Main Primary color */
 .rgba-primary-1 { color: rgba(174,203,228,1) }
