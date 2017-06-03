@@ -18,15 +18,15 @@
 	font-family: 'Kaushan Script', cursive;
 }
 
-body {
+body#css-zen-garden {
 	display: flex;
 	background: rgba(12, 39, 63, 1);
 }
-body * {
+body#css-zen-garden * {
 	font-family: 'Kaushan Script', cursive;
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
-body, section#zen-intro * {
+body#css-zen-garden, section#zen-intro * {
 	color: rgba(255, 46, 95, 1);
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
@@ -62,7 +62,7 @@ aside.sidebar {
 	margin-right: 1ex;
 }
 
-@media only screen and (any-hover) and (max-width: 60rem) {
+@media only screen and not (any-hover) and (max-width: 60rem) {
 	aside.sidebar {
 		position: absolute;
 		width: 20rem;
