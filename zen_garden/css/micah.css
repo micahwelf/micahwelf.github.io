@@ -17,8 +17,12 @@
 body {
 	background: rgba(12, 39, 63, 1);
 }
+body * {
+	text-shadow: 1pt 1pt rgb(21, 0, 11, 0.7);
+}
 body, #zen-intro * {
 	color: rgba(255, 46, 95, 1);
+	text-shadow: .5pt .5pt .5pt rgb(21, 0, 11, 0.7);
 }
 #zen-intro {
 	margin: 1ex;
@@ -34,6 +38,7 @@ body, #zen-intro * {
 #zen-supporting * {
 	color: rgba(21, 0, 11, 1);
 	color: rgba(255, 46, 95, 1);
+	text-shadow: .5pt .5pt .5pt rgb(21, 0, 11, 0.7);
 }
 
 
@@ -41,16 +46,19 @@ body, #zen-intro * {
 /*	background: rgba(235, 165, 205, 0.9);*/
 	background: rgba(236, 241, 130, 0.8);
 	color: rgba(1, 9, 16, 1);
+	text-shadow: 1pt 1pt rgb(21, 0, 11, 0.7);
 	border-radius: 0rem 1rem 1rem 0rem;
 	margin-right: 1ex;
 }
 
-@media only screen and (max-width: 8in) {
-	.sidebar:hover {
-		width: auto;
-	}
+@media only screen and (any-hover) and (max-width: 30rem) {
 	.sidebar {
-		width: 1rem;
+		position: relative;
+		width: 30rem;
+	}
+	.sidebar:hover {
+		position: absolute;
+		left: -29rem;
 	}
 }
 
