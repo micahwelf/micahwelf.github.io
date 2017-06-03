@@ -34,13 +34,13 @@ body, #zen-intro * {
 	background: rgba(42, 78, 110, 1);
 }	
 
-#zen-supporting {
-/*	background: rgba(255, 214, 180, 0.9);*/
+.main#zen-supporting {
+	background: rgba(255, 214, 180, 0.9);
 	background: rgba(241, 180, 212, 0.8);
 	border-radius: 1rem 0rem 0rem 1rem;
 	margin-left: 1rem;
 }
-#zen-supporting * {
+.main#zen-supporting * {
 	color: rgba(21, 0, 11, 1);
 	color: rgba(255, 46, 95, 1);
 	text-shadow: .5pt .5pt .5pt rgba(21, 0, 11, 0.7);
@@ -48,12 +48,12 @@ body, #zen-intro * {
 }
 
 
-.sidebar {
+aside.sidebar {
 /*	background: rgba(235, 165, 205, 0.9);*/
 	position: relative:
 	left: 0px;
 	width: 20rem;
-
+	
 	background: rgba(236, 241, 130, 0.8);
 	color: rgba(1, 9, 16, 1);
 	text-shadow: 1pt 1pt rgba(21, 0, 11, 0.7);
@@ -63,22 +63,23 @@ body, #zen-intro * {
 }
 
 @media only screen and (any-hover) and (max-width: 30rem) {
-	.sidebar {
-		position: relative;
+	aside.sidebar {
+		position: absolute;
 		width: 30rem;
+		left: -29rem;
 		overflow: hidden;
 	}
-	.sidebar * {
+	aside.sidebar * {
 		max-width: 0rem;
 	}
-	.sidebar:hover * {
+	aside.sidebar:hover * {
 		max-width: 30rem;
 		
 	}
-	.sidebar:hover {
+	aside.sidebar:hover {
 		position: absolute;
-		left: -29rem;
-		overflow: visible;
+		left: 0rem;
+/*		overflow: visible;*/
 	}
 }
 
