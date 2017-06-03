@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 .page-wrapper {
     
 }
@@ -13,11 +14,15 @@
 [role="article"] {
     
 }
+.kaushan {
+	font-family: 'Kaushan Script', cursive;
+}
 
 body {
 	background: rgba(12, 39, 63, 1);
 }
 body * {
+	font-family: 'Kaushan Script', cursive;
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11, 0.7);
 }
 body, #zen-intro * {
@@ -45,6 +50,10 @@ body, #zen-intro * {
 
 .sidebar {
 /*	background: rgba(235, 165, 205, 0.9);*/
+	position: relative:
+	left: 0px;
+	width: 20rem;
+
 	background: rgba(236, 241, 130, 0.8);
 	color: rgba(1, 9, 16, 1);
 	text-shadow: 1pt 1pt rgb(21, 0, 11, 0.7);
@@ -64,6 +73,7 @@ body, #zen-intro * {
 	}
 	.sidebar:hover * {
 		max-width: 30rem;
+		
 	}
 	.sidebar:hover {
 		position: absolute;
