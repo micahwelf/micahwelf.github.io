@@ -32,6 +32,7 @@ body#css-zen-garden, section#zen-intro * {
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
 section#zen-intro {
+	display: block;
 	order: 0;
 	margin: 1ex;
 	background: rgba(42, 78, 110, 1);
