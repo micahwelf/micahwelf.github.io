@@ -16,6 +16,8 @@
 
 body {
 	background: rgba(12, 39, 63, 1);
+}
+body *, p, h3, div {
 	color: rgba(255, 46, 95, 1);
 }
 
