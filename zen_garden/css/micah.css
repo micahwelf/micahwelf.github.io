@@ -26,11 +26,11 @@ body * {
 	font-family: 'Kaushan Script', cursive;
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
-body, #zen-intro * {
+body, section#zen-intro * {
 	color: rgba(255, 46, 95, 1);
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
-#zen-intro {
+section#zen-intro {
 	margin: 1ex;
 	background: rgba(42, 78, 110, 1);
 }	
@@ -87,11 +87,11 @@ aside.sidebar {
    LATER CHANGE "(any-hover)" TO "not (any-hover>" */
 @media only screen and (any-hover) and (max-width: 60rem) {
 	aside.sidebar {
-		position: fixed;
+		position: static;
 		float: left:
 	}
 	.main#zen-supporting {
-		position: fixed;
+		position: static;
 		clear: none;
 	}
 }
