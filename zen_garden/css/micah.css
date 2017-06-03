@@ -17,8 +17,8 @@
 body {
 	background: rgba(12, 39, 63, 1);
 }
-*, *>* {
-	color: rgba(255, 46, 95, 1) !important;
+body, #zen-intro * {
+	color: rgba(255, 46, 95, 1);
 }
 
 [role="main"] {
