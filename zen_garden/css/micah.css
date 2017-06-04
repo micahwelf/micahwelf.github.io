@@ -23,7 +23,7 @@ body#css-zen-garden {
 	grid-template-columns: 2rem auto 2rem;
 	grid-template-rows: auto;
 	background: hsla( 106, 48%, 70%, 1 );
-	background-image: ../jungle.jpg;
+	background-image: url(../jungle.jpg);
 	margin: 0rem;
 }
 body#css-zen-garden * {
