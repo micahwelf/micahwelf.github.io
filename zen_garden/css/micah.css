@@ -88,7 +88,7 @@ aside.sidebar {
 	margin-right: 1ex;
 }
 
-@media only screen and not (any-hover) and (max-width: 60rem) {
+@media only screen and not (any-hover) and (max-width: 55rem) {
 	aside.sidebar {
 		position: absolute;
 		width: 20rem;
@@ -111,13 +111,17 @@ aside.sidebar {
 }
 /* TEST SCREENS WITHOUT A MOUSE (TABLETS, ETC), THEN
    LATER CHANGE "(any-hover)" TO "not (any-hover>" */
-@media only screen and (any-hover) and (max-width: 60rem) {
+@media only screen and (any-hover) and (max-width: 55rem) {
 	aside.sidebar {
+		display: block;
+		grid-column: 1 / span 2;
 		position: static;
-		float: left:
+		float: none:
 	}
 	.main#zen-supporting {
 		position: static;
+		grid-column: 1 / span 2;
+		grid-row: 3 / span 1;
 		clear: none;
 	}
 }
