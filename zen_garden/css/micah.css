@@ -1,26 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
-
-.intro {
-    
-}
-
-.intro [role="banner"] {
-    
-}
-
-[role="article"] {
-    
-}
-.kaushan {
+/*@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');*/
+/*
 	font-family: 'Kaushan Script', cursive;
-}
+	*/
+
 div.page-wrapper {
 	display:flex;
 	flex-wrap:wrap;
 	justify-content: space-between;
 }
 html {
-	background: hsla(106, 48%, 13%, 1);
+	background: hsla( 106, 48%, 10%, 1 );
 }
 body#css-zen-garden {
 	display: flex;
@@ -32,7 +21,8 @@ body#css-zen-garden * {
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
 body#css-zen-garden, section#zen-intro * {
-	color: rgba(255, 46, 95, 1);
+	color: rgba( 255, 46, 95, 1 );
+	color: hsla( 310, 100%, 52%, 1 );
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
 section#zen-intro {
@@ -51,8 +41,9 @@ section#zen-intro {
 	margin-left: 1rem;
 }
 .main#zen-supporting * {
-	color: rgba(21, 0, 11, 1);
-	color: rgba(255, 46, 95, 1);
+	color: rgba( 21, 0, 11, 1 );
+	color: rgba( 255, 46, 95, 1 );
+	color: hsla( 310, 100%, 52%, 1 );
 	text-shadow: .5pt .5pt .5pt rgba(21, 0, 11, 0.7);
 	text-shadow: 1pt 1pt 1pt rgba(21, 0, 11, 0.7);
 }
@@ -66,6 +57,7 @@ aside.sidebar {
 	width: 20rem;
 /*	background: rgba(236, 241, 130, 0.8);*/
 	color: rgba(1, 9, 16, 1);
+	color: hsla( 106, 50%, 3%, 1 );
 	text-shadow: 1pt 1pt rgba(21, 0, 11, 0.7);
 	text-shadow: 1pt 1pt 1pt rgba(21, 0, 11, 0.7);
 	border-radius: 0rem 1rem 1rem 0rem;
