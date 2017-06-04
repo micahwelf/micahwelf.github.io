@@ -16,13 +16,14 @@ div.page-wrapper {
 	grid-template-columns: 20rem auto;
 	grid-template-rows: auto auto auto;
 	background: hsla( 106, 48%, 10%, 1 );
-	box-shadow: 0rem 0rem 1.5rem 0.8rem inset hsla( 106, 48%, 70%, 1 );
+	box-shadow: 0rem 0rem 1.5rem 1rem hsla( 106, 48%, 10%, 1 );
 }
 body#css-zen-garden {
 	display: grid;
 	grid-template-columns: 2rem auto 2rem;
 	grid-template-rows: auto;
 	background: hsla( 106, 48%, 70%, 1 );
+	background-image: ../jungle.jpg;
 	margin: 0rem;
 }
 body#css-zen-garden * {
