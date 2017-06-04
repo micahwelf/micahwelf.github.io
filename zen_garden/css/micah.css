@@ -10,7 +10,7 @@
 */
 
 div.page-wrapper {
-	display: grid;
+	display: subgrid;
 	grid-column: 2 / span 1;
 	grid-row: 1 / span 1;
 	grid-template-columns: 20rem auto;
@@ -20,7 +20,7 @@ div.page-wrapper {
 }
 body#css-zen-garden {
 	display: grid;
-	grid-template-columns: 2rem auto 2rem;
+	grid-template-columns: 4rem auto 4rem;
 	grid-template-rows: auto;
 	background: hsla( 106, 48%, 70%, 1 );
 	background-image: url(../jungle.jpg);
@@ -105,6 +105,11 @@ aside.sidebar {
 		position: absolute;
 		left: 0rem;
 /*		overflow: visible;*/
+	}
+}
+@media only screen and (max-width: 55rem) {
+	section.intro#zen-intro {
+		background-image: none;
 	}
 }
 /* TEST SCREENS WITHOUT A MOUSE (TABLETS, ETC), THEN
