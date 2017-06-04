@@ -38,7 +38,7 @@ body#css-zen-garden, section#zen-intro * {
 	color: hsla( 310, 100%, 52%, 1 );
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
-section#zen-intro {
+section.intro#zen-intro {
 	display: block;
 	position:static;
 	order: 0;
@@ -48,6 +48,9 @@ section#zen-intro {
 	grid-row: 1 / span 1;
 /*	background: rgba(42, 78, 110, 1);*/
 }	
+section.intro#zen-intro>header, section.intro#zen-intro>div.summary#zen-summary {
+	width: 50%;
+}
 
 .main#zen-supporting {
 	position: static;
