@@ -4,7 +4,8 @@ body {
           /* rgb(96, 130, 46); */
           url(../magenta-frog.jpg)
             no-repeat top right;
-            width="40px" height="auto"
+            max-width: 100%;
+          
            
             
       
