@@ -20,7 +20,7 @@ div.page-wrapper {
 }
 body#css-zen-garden {
 	display: grid;
-	grid-template-columns: 4rem auto 4rem;
+	grid-template-columns: 6rem auto 6rem;
 	grid-template-rows: auto;
 	background: hsla( 106, 48%, 70%, 1 );
 	background-image: url(../jungle.jpg);
