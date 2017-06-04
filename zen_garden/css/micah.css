@@ -2,6 +2,15 @@
 /*
 	font-family: 'Kaushan Script', cursive;
 	*/
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Lato|PT+Sans|Quattrocento+Sans|Questrial|Rubik');
+/*
+	font-family: 'Lato', sans-serif;
+	font-family: 'PT Sans', sans-serif;
+	font-family: 'Rubik', sans-serif;
+	font-family: 'Questrial', sans-serif;
+	font-family: 'Quattrocento Sans', sans-serif;
+	font-family: 'Frank Ruhl Libre', sans-serif;
+*/
 
 div.page-wrapper {
 	display:grid;
@@ -23,7 +32,7 @@ body#css-zen-garden {
 	margin: 0rem;
 }
 body#css-zen-garden * {
-/*	font-family: 'Kaushan Script', cursive;*/
+	font-family: 'PT Sans', sans-serif;
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
 body#css-zen-garden, section#zen-intro * {
