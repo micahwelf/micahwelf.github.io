@@ -16,7 +16,7 @@ div.page-wrapper {
 	grid-template-columns: 20rem auto;
 	grid-template-rows: auto auto auto;
 	background: hsla( 106, 48%, 10%, 1 );
-	box-shadow: 0rem 0rem 1.5rem 1rem hsla( 106, 48%, 10%, 1 );
+	box-shadow: 0rem 0rem 3rem 2rem hsla( 106, 48%, 10%, 1 );
 }
 body#css-zen-garden {
 	display: grid;
@@ -49,7 +49,11 @@ section.intro#zen-intro {
 /*	background: rgba(42, 78, 110, 1);*/
 }	
 section.intro#zen-intro>header, section.intro#zen-intro>div.summary#zen-summary {
-	width: 50%;
+	width: 58%;
+}
+section.intro#zen-intro>header {
+	text-wrap: none;
+	overflow: visible;
 }
 
 .main#zen-supporting {
