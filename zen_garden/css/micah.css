@@ -21,6 +21,7 @@ div.page-wrapper {
 body#css-zen-garden {
 	display: flex;
 /*	background: rgba(12, 39, 63, 1);*/
+	background: hsla(106, 48%, 13%, 1);
 	margin: 0rem;
 }
 body#css-zen-garden * {
