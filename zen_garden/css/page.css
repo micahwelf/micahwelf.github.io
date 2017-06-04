@@ -4,9 +4,9 @@
       background:
           url(../magenta-frog.jpg) 
             no-repeat top right;
-      background-size:
-          width:50%;
-    height: auto;;
+      background-size
+	width:10%;
+    	height: auto;;
          
 }
 
