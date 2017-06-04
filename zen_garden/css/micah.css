@@ -4,9 +4,12 @@
 	*/
 
 div.page-wrapper {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content: space-between;
+	display:grid;
+	grid-template-columns: 20rem auto;
+	grid-template-rows: auto 60rem auto;
+/*	flex-wrap:wrap;*/
+/*	justify-content: space-between;*/
+	background-image: url(../magenta-frog.jpg);
 }
 html {
 	background: hsla( 106, 48%, 10%, 1 );
