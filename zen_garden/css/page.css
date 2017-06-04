@@ -26,6 +26,6 @@ div.extra1[role="presentation"] {
 	top: rem;
 	width: 25rem;
 	height: 25rem;
-	background-image: ../magenta-frog.jpg;
+	
 	background-size: contain;
 }
