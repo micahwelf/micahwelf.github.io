@@ -17,13 +17,25 @@ body#css-zen-garden {
 }
 
 div.page-wrapper {
-	display: subgrid;
+	display: inline-grid;
 	grid-column: 2 / span 3;
 	grid-row: 1 / span 5;
-/*	grid-template-columns: 20rem auto;*/
-/*	grid-template-rows: auto auto auto;*/
+	grid-template-columns: 25rem auto 25rem;
+	grid-template-rows: auto auto auto auto auto;
 	background: hsla( 106, 48%, 10%, 1 );
 	box-shadow: 0rem 0rem 3rem 2rem hsla( 106, 48%, 10%, 1 );
+}
+section.intro#zen-intro>header {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 1;
+}
+section.intro#zen-intro>div.summary#zen-summary {
+	grid-column: 1 / span 2;
+	grid-row: 2 / span 1;
+}
+section.intro#zen-intro>div.preamble#zen-preamble {
+	grid-column: 1 / span 3;
+	grid-row: 3 / span 1;
 }
 aside.sidebar {
 	grid-column: 1 / span 1;
@@ -91,7 +103,7 @@ aside.sidebar {
 }
 
 
-@media only screen and not (any-hover) and (max-width: 55rem) {
+@media only screen and (any-hover) and (max-width: 55rem) {
 	aside.sidebar {
 		position: absolute;
 		width: 20rem;
@@ -118,18 +130,34 @@ aside.sidebar {
 	section.intro#zen-intro {
 		background-image: none;
 	}
+	body#css-zen-garden {
+		grid-template-columns: 8rem auto auto 0rem 8rem;
+		grid-template-rows: auto auto auto auto auto;
+	}
+}
+
+
+@media only screen and (max-width: 30rem) {
+	section.intro#zen-intro {
+		background-image: none;
+	}
+	body#css-zen-garden {
+		grid-template-columns: 0rem auto auto 0rem 0rem;
+		grid-template-rows: auto auto auto auto auto;
+	}
 }
 
 
 /* TEST SCREENS WITHOUT A MOUSE (TABLETS, ETC), THEN
    LATER CHANGE "(any-hover)" TO "not (any-hover>" */
    
-@media only screen and (any-hover) and (max-width: 55rem) {
+@media only screen and not (any-hover) and (max-width: 55rem) {
 	aside.sidebar {
-		grid-column: 1 / span 2;
+		grid-column-end: span 3;
 	}
 	.main#zen-supporting {
-		grid-column: 1 / span 2;
+		grid-column-start: 1;
+		grid-column-end: span 3;
 		grid-row: 5 / span 1;
 	}
 
@@ -147,7 +175,7 @@ aside.sidebar {
 }
 
 
-@media only screen and (any-hover) and (min-width: 55rem) {
+@media only screen and not (any-hover) and (min-width: 55rem) {
 /*	div.page-wrapper {*/
 /*		grid-template-columns: 20rem auto;*/
 /*		grid-template-rows: auto auto auto;*/
