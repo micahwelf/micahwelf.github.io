@@ -2,13 +2,11 @@
 
 .intro#zen-intro {
       background:
-          url(../magenta-frog.jpg) 
-            no-repeat top right;
-	box-shadow: 0rem 0rem 3rem 2rem hsla( 106, 48%, 10%, 1 );
-      background-size: 30% auto;
-      
-    	
-	
+          url(../magenta-frog.jpg) no-repeat top right;
+      box-shadow: 
+	  0rem 0rem 3rem 2rem hsla( 106, 48%, 10%, 1 );
+      background-size: 
+	  30% auto;	
 }
 
 body {
@@ -21,3 +19,7 @@ body {
             background-size: cover;            
 }
 
+section#zen-intro h1 {
+	color: rgba( 0, 46, 95, 1 );
+	
+}
