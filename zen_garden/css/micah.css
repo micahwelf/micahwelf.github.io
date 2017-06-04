@@ -85,24 +85,30 @@ body#css-zen-garden * {
 	font-family: 'PT Sans', sans-serif;
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
+
 section#zen-intro h1 {
 	font-family: 'Kaushan Script', cursive;
+/*	hsla(217, 90%, 56%, 1)*/
 }
+
 body#css-zen-garden, section#zen-intro * {
 	color: rgba( 255, 46, 95, 1 );
 	color: hsla( 310, 100%, 52%, 1 );
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
+
 section.intro#zen-intro {
 	display: inline-grid;
 	position:static;
 	order: 0;
 	margin: 1ex;
-	width:100%;
 }	
-section.intro#zen-intro>header, section.intro#zen-intro>div.summary#zen-summary {
-	width: 58%;
+
+section.intro#zen-intro>header,
+section.intro#zen-intro>div.summary#zen-summary {
+/*	width: 58%;*/
 }
+
 section.intro#zen-intro>header {
 	text-wrap: none;
 	overflow: visible;
@@ -113,6 +119,7 @@ section.intro#zen-intro>header {
 	order: 2;
 	border-radius: 1rem 0rem 0rem 1rem;
 	margin-left: 1rem;
+	background: hsla(217, 90%, 56%, 0.5);
 }
 .main#zen-supporting * {
 	color: rgba( 21, 0, 11, 1 );
@@ -133,22 +140,25 @@ aside.sidebar {
 	text-shadow: 1pt 1pt 1pt rgba(21, 0, 11, 0.7);
 	border-radius: 0rem 1rem 1rem 0rem;
 	margin-right: 1ex;
+	background: hsla(217, 90%, 56%, 0.5);
 }
 
 
 @media only screen and (any-hover) and (max-width: 55rem) {
 	aside.sidebar {
-		position: absolute;
-		width: 20rem;
-		left: -19rem;
+		position: fixed;
+		width: 22rem;
+		top: 8rem;
+		left: -21rem;
 		overflow: hidden;
-		transition: left 0.8;
+		transition: left,max-width 0.8;
 	}
 	aside.sidebar * {
 		max-width: 0rem;
+		max-height: calc( 100% - 8rem);
 	}
 	aside.sidebar:hover * {
-		max-width: 18rem;
+		max-width: 20rem;
 		
 	}
 	aside.sidebar:hover {
