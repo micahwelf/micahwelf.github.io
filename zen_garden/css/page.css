@@ -2,8 +2,10 @@
 body {
       background: 
           /* rgb(96, 130, 46); */
-          url(../magenta-frog.jpg) width: 25%;
-            height: auto; no-repeat top right;
+          url(../magenta-frog.jpg)
+            no-repeat top right;
+            width: 25%;
+            height: auto;
             
       
       margin: 0; 
