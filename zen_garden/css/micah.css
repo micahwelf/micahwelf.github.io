@@ -10,6 +10,8 @@ div.page-wrapper {
 /*	flex-wrap:wrap;*/
 /*	justify-content: space-between;*/
 	background-image: url(../magenta-frog.jpg);
+	background-position: right top;
+	background-repeat: no-repeat;
 }
 html {
 	background: hsla( 106, 48%, 10%, 1 );
@@ -33,10 +35,14 @@ section#zen-intro {
 	order: 0;
 	margin: 1ex;
 	width:100%;
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 1;
 /*	background: rgba(42, 78, 110, 1);*/
 }	
 
 .main#zen-supporting {
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 2;
 	order: 2;
 /*	background: rgba(255, 214, 180, 0.9);*/
 /*	background: rgba(241, 180, 212, 0.8);*/
@@ -53,6 +59,8 @@ section#zen-intro {
 
 
 aside.sidebar {
+	grid-column: 1 / span 1;
+	grid-row: 2 / span 1;
 	order: 1;
 /*	background: rgba(235, 165, 205, 0.9);*/
 	position: relative;
