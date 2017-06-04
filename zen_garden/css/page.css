@@ -19,4 +19,7 @@ body {
             background-size: cover;            
 }
 
-
+ section#zen-intro h1 {
+	color: #3090ff;
+	 
+}
