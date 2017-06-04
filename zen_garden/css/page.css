@@ -19,4 +19,12 @@ body {
             background-size: cover;            
 }     
       
-      
+div.extra1[role="presentation"] {
+	position: absolute;
+	right: 2rem;
+	top: rem;
+	width: 25rem;
+	height: 25rem;
+	background-image: ../magenta-frog.jpg;
+	background-size: contain;
+}
