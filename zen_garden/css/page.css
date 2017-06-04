@@ -19,7 +19,7 @@ body {
             background-size: cover;            
 }
 
- section#zen-intro h1, section.intro#zen-intro>div.summary#zen-summary {
+ section#zen-intro h1, div.summary#zen-summary {
 	color: #307cff;
 	 
 }
