@@ -17,14 +17,4 @@ body {
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;            
-}     
-      
-div.extra1[role="presentation"] {
-	position: absolute;
-	right: 2rem;
-	top: rem;
-	width: 25rem;
-	height: 25rem;
-	
-	background-size: contain;
 }
