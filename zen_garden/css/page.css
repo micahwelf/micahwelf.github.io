@@ -4,15 +4,10 @@ body {
           /* rgb(96, 130, 46); */
           url(../magenta-frog.jpg) 
             no-repeat top right;
-            width: 25%;
+            max-width: 25%;
             height: auto;
               
-        
- -      margin: 5; 
- -     padding: 0;
-           
-            
-      
+
       
   
 }
