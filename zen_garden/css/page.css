@@ -5,8 +5,8 @@
       background:
           url(../magenta-frog.jpg) 
             no-repeat top right;
-            max-width: 25%;
-            max-height: 25%;
+            max-width:100%;
+            height: auto;
               
 
       
