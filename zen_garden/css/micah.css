@@ -138,7 +138,6 @@ aside.sidebar {
 }
 @media only screen and (any-hover) and (min-width: 55rem) {
 	div.page-wrapper {
-		display:grid;
 		grid-template-columns: 20rem auto;
 		grid-template-rows: auto auto auto;
 	}
@@ -151,8 +150,8 @@ aside.sidebar {
 	}
 	.main#zen-supporting {
 		position: static;
-		grid-column: 1 / span 2;
-		grid-row: 3 / span 1;
+		grid-column: 2 / span 1;
+		grid-row: 2 / span 1;
 		clear: none;
 	}
 }
