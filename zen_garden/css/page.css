@@ -3,8 +3,8 @@ body {
       background: 
           /* rgb(96, 130, 46); */
           url(../magenta-frog.jpg)
-            no-repeat top right;
             max-width: 50%;
+            top right;
           
            
             
