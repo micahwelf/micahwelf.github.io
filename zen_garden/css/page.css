@@ -1,20 +1,19 @@
 
 
 .intro#zen-intro {
-      
       background:
           url(../magenta-frog.jpg) 
             no-repeat top right;
       background-size:
-            contain;
-            
-      
-      
-      
-           
-              
-
-      
-  
+          contain;
+         
 }
 
+body {
+      background:
+            url(../)
+            no-repeat;
+            
+}     
+      
+      
