@@ -13,15 +13,8 @@ div.page-wrapper {
 	display:grid;
 	grid-template-columns: 20rem auto;
 	grid-template-rows: auto auto auto;
-	box-shadow: 0rem 0rem 1.5rem 0.8rem inset hsla( 106, 48%, 70%, 1 );
-/*	flex-wrap:wrap;*/
-/*	justify-content: space-between;*/
-/*	background-image: url(../magenta-frog.jpg);*/
-/*	background-position: right top;*/
-/*	background-repeat: no-repeat;*/
-}
-html {
 	background: hsla( 106, 48%, 10%, 1 );
+	box-shadow: 0rem 0rem 1.5rem 0.8rem inset hsla( 106, 48%, 70%, 1 );
 }
 body#css-zen-garden {
 	display: flex;
@@ -117,6 +110,27 @@ aside.sidebar {
 		grid-column: 1 / span 2;
 		position: static;
 		float: none:
+		width: auto;
+	}
+	.main#zen-supporting {
+		position: static;
+		grid-column: 1 / span 2;
+		grid-row: 3 / span 1;
+		clear: none;
+	}
+}
+@media only screen and (any-hover) and (min-width: 55rem) {
+	div.page-wrapper {
+		display:grid;
+		grid-template-columns: 20rem auto;
+		grid-template-rows: auto auto auto;
+	}
+	aside.sidebar {
+		display: block;
+		grid-column: 1 / span 2;
+		position: static;
+		float: none:
+		width: auto;
 	}
 	.main#zen-supporting {
 		position: static;
