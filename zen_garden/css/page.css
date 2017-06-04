@@ -6,7 +6,10 @@
             no-repeat top right;
       background-size
 	width:10%;
-    	height: auto;;
+    	height: auto;
+	right: 2rem;
+	width: 25rem;
+	height: 25rem;
          
 }
 
