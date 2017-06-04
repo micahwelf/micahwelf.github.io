@@ -9,9 +9,9 @@ div.page-wrapper {
 	grid-template-rows: auto 60rem auto;
 /*	flex-wrap:wrap;*/
 /*	justify-content: space-between;*/
-	background-image: url(../magenta-frog.jpg);
-	background-position: right top;
-	background-repeat: no-repeat;
+/*	background-image: url(../magenta-frog.jpg);*/
+/*	background-position: right top;*/
+/*	background-repeat: no-repeat;*/
 }
 html {
 	background: hsla( 106, 48%, 10%, 1 );
