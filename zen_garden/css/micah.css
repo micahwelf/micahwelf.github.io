@@ -99,12 +99,15 @@ body#css-zen-garden {
 	}
 			
    
-@media only screen and not (any-hover) and (max-width: 55rem) {
+@media only screen and and (max-width: 75rem) {
+	:root {
+		--frogsize: calc (100% - var(--gutters));
+	}
 }
 
 @media only screen and (max-width: 55rem) {
 	:root {
-		--frogsize: calc( 1vw - var(--gutters) );
+		--frogsize: calc (100% - var(--gutters));
 	}
 /*	body#css-zen-garden {*/
 /*		grid-template-columns: 8rem auto 0rem 8rem;*/
@@ -191,13 +194,13 @@ aside.sidebar {
 	aside.sidebar {
 		position: fixed;
 		width: 22rem;
-		top: 8rem;
+		height: calc( 1vh - 3rem );
+		top: 3rem;
 		left: -21rem;
 		overflow: hidden;
 		transition: left 0.8s;
 	}
 	aside.sidebar * {
-		max-width: 0rem;
 		max-height: calc( 1vh - 8rem);
 	}
 	aside.sidebar:hover * {
