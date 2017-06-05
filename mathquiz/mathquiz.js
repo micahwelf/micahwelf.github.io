@@ -1,24 +1,29 @@
 
 var heading = document.querySelector("#title");
 
-var va = document.querySelector("#a");
-var vb = document.querySelector("#b");
-var ans = document.querySelector("#answer");
+var numA = document.querySelector("#a");
+var numB = document.querySelector("#b");
+var userAns = document.querySelector("#answer");
 var btn = document.querySelector("#check-answer");
 
-var a = Math.ceil(Math.random * 100);
+var a = Math.ceil(Math.random() * 100);
+var b = Math.ceil(Math.random() * 100);
 
-var b = Math.ceil(Math.random * 100);
-va.innerHTML = a;
-vb.innerHTML = b;
+var newNums = function () {
+  a = Math.ceil(Math.random() * 100);
+  numA = toString(a);
+  b = Math.ceil(Math.random() * 100);
+  numB = toString(b);
+};
 
+newNums();
 
 var checkAns = function () {
-  var realAns = a + b;
-  var usrAns = ans.value;
-  if (realAns == usrAns) {
-    alert("Right");}
-  else {
+  var realAns = a * b;
+  var usrAns = userAns.value;
+  if (realAns === parseInt(usrAns, 10)) {
+    alert("Right");
+  } else {
     alert("Wrong");
   }
 
