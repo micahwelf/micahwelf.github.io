@@ -1,1 +1,1 @@
-alert("Hello, Javascript.");
+console.log("Hello, console.");
