@@ -78,15 +78,15 @@ body#css-zen-garden {
 
 @media only screen and (max-width: 55rem) {
 	body#css-zen-garden {
-		grid-template-columns: 8rem auto auto 0rem 8rem;
-		grid-template-rows: auto auto auto auto auto;
+		grid-template-columns: 8rem auto 0rem 8rem;
+		grid-template-rows: auto auto;
 	}
 }
 
 @media only screen and (max-width: 30rem) {
 	body#css-zen-garden {
-		grid-template-columns: 0rem auto auto 0rem 0rem;
-		grid-template-rows: auto auto auto auto auto;
+		grid-template-columns: 0rem auto 0rem 0rem;
+		grid-template-rows: auto auto;
 	}
 }
 
