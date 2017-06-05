@@ -206,7 +206,7 @@ aside.sidebar {
 		bottom: 0rem;
 		left: -21rem;
 		overflow-x: hidden;
-		overflow-y: scroll;
+		overflow-y: auto;
 		transition: left,background 0.8s;
 	}
 	aside.sidebar:hover, aside.sidebar:focus {
