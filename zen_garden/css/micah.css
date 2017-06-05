@@ -181,11 +181,11 @@ aside.sidebar {
 		top: 8rem;
 		left: -21rem;
 		overflow: hidden;
-		transition: left 0.8;
+		transition: left 0.8s;
 	}
 	aside.sidebar * {
 		max-width: 0rem;
-		max-height: calc( 100% - 8rem);
+		max-height: calc( 1vh - 8rem);
 	}
 	aside.sidebar:hover * {
 		max-width: 20rem;
