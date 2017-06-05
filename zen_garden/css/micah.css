@@ -18,6 +18,17 @@
 	--boxbg: hsla(217, 90%, 56%, 0.5);
 	--solidboxbg: hsla(217, 90%, 56%, 0.9);
 }
+@media only screen and and (max-width: 75rem) {
+	:root {
+		--frogsize: 15rem;
+	}
+}
+
+@media only screen and (max-width: 55rem) {
+	:root {
+		--frogsize: 25rem;
+	}
+}
 
 body#css-zen-garden {
 	display: grid;
@@ -82,6 +93,7 @@ body#css-zen-garden {
 			grid-column: 1 / span 1;
 			grid-row: 2 / span 1;
 			grid-area: links;
+			z-index: 5;
 		}
 		.main#zen-supporting {
 			grid-column: 2 / span 1;
