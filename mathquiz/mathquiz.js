@@ -11,3 +11,5 @@ var heading = document.querySelector("#title");
 console.log(heading);
 
 heading.style.color = "blue";
+
+heading.innerHTML = "New Title set by JS";
