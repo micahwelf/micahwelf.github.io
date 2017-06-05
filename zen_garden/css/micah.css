@@ -207,12 +207,8 @@ aside.sidebar {
 		overflow: hidden;
 		transition: left 0.8s;
 	}
-	aside.sidebar * {
-		max-height: calc( 1vh - 8rem);
-	}
 	aside.sidebar:hover * {
 		max-width: 20rem;
-		
 	}
 	aside.sidebar:hover {
 		position: fixed;
