@@ -1,6 +1,14 @@
 
 var heading = document.querySelector("#title");
 
+var a = document.querySelector("#a");
+var a = document.querySelector("#b");
+var ans = document.querySelector("#answer");
+var btn = document.querySelector("#check-answer");
+
+a.innerHTML = Math.ceil(Math.random)
+
+
 var changePage = function() {
   console.log("Function on click activated.");
   console.log(document.body);
