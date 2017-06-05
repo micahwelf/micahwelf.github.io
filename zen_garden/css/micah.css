@@ -9,13 +9,13 @@
 	font-family: 'Kaushan Script', cursive;
 */
 :root {
-	frogimgsize: 25rem;
+	--frogimgsize: 25rem;
 	
 }
 
 body#css-zen-garden {
 	display: grid;
-	grid-template-columns: 8rem auto var(frogimgsize) 8rem;
+	grid-template-columns: 8rem auto var(--frogimgsize) 8rem;
 	grid-template-rows: 25rem auto;
 	grid-template-areas:
 		"left-gutter .            frog         right-gutter"
