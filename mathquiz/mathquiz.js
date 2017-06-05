@@ -1,7 +1,7 @@
 
 var heading = document.querySelector("#title");
 
-function changePage() {
+var changePage = function() {
   console.log("Function on click activated.");
   console.log(document.body);
 
@@ -14,4 +14,4 @@ function changePage() {
   heading.style.color = "blue";
 
   heading.innerHTML = "New Title set by JS";
-}
+};
