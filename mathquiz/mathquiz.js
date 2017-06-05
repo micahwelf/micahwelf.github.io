@@ -1,20 +1,26 @@
 
 var heading = document.querySelector("#title");
 
-var a = document.querySelector("#a");
-var a = document.querySelector("#b");
+var va = document.querySelector("#a");
+var vb = document.querySelector("#b");
 var ans = document.querySelector("#answer");
 var btn = document.querySelector("#check-answer");
 
-a.innerHTML = Math.ceil(Math.random * 100);
+var a = Math.ceil(Math.random * 100);
 
-b.innerHTML = Math.ceil(Math.random * 100);
+var b = Math.ceil(Math.random * 100);
+va.innerHTML = a;
+vb.innerHTML = b;
+
 
 var checkAns = function () {
-  var realAns = a.innerHTML + b.innerHTML;
-
-  if (realAns == ans.value) {alert("Right");}
-  else {alert("Wrong");};
+  var realAns = a + b;
+  var usrAns = ans.value;
+  if (realAns == usrAns) {
+    alert("Right");}
+  else {
+    alert("Wrong");
+  }
 
 }
 btn.onclick = checkAns(a.innerHTML, b.innerHTML, ans.value);
