@@ -6,8 +6,9 @@ var a = document.querySelector("#b");
 var ans = document.querySelector("#answer");
 var btn = document.querySelector("#check-answer");
 
-a.innerHTML = Math.ceil(Math.random)
+a.innerHTML = Math.ceil(Math.random * 100);
 
+b.innerHTML = Math.ceil(Math.random * 100);
 
 var changePage = function() {
   console.log("Function on click activated.");
