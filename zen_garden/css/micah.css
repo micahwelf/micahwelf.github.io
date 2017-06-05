@@ -27,7 +27,7 @@ body#css-zen-garden {
 /*		grid-row: 1 / span 2;*/
 		grid-template-columns: 20rem auto;
 		grid-template-rows: auto auto auto;
-		
+		grid-template-areas: "u ouu";
 		background: hsla( 99, 45%, 9%, 1 );
 		box-shadow: 0rem 0rem 3rem 2rem hsla( 99, 45%, 9%, 1 );
 	}
@@ -36,20 +36,29 @@ body#css-zen-garden {
 			grid-column: 1 / span 2;
 			grid-row: 1 / span 1;
 			grid-template-columns: auto 25rem;
-			grid-template-rows: 12rem 13rem auto;
+			grid-template-rows: auto auto auto;
+			grid-template-areas:
+				"intro frog"
+				"summary frog"
+				"preamble preamble;
 		}
 			
 			section.intro#zen-intro>header {
 				grid-column: 1 / span 1;
 				grid-row: 1 / span 1;
+				min-height: 12rem;
+				grid-area: intro;
 			}
 			section.intro#zen-intro>div.summary#zen-summary {
 				grid-column: 1 / span 1;
 				grid-row: 2 / span 1;
+				min-height: 13rem;
+				grid-area: summary;
 			}
 			section.intro#zen-intro>div.preamble#zen-preamble {
 				grid-column: 1 / span 3;
 				grid-row: 3 / span 1;
+				grid-area: preamble;
 			}
 		
 		aside.sidebar {
@@ -62,7 +71,7 @@ body#css-zen-garden {
 		}
 	div.extra1 {
 		grid-area: frog;
-		background-image: ../magenta-frog.jpg;
+		background-image: url(../magenta-frog.jpg);
 		background-size: cover;
 	}
 			
@@ -162,7 +171,7 @@ aside.sidebar {
 		top: 8rem;
 		left: -21rem;
 		overflow: hidden;
-		transition: left,max-width 0.8;
+		transition: left 0.8;
 	}
 	aside.sidebar * {
 		max-width: 0rem;
@@ -173,7 +182,7 @@ aside.sidebar {
 		
 	}
 	aside.sidebar:hover {
-		position: absolute;
+		position: fixed;
 		left: 0rem;
 /*		overflow: visible;*/
 	}
