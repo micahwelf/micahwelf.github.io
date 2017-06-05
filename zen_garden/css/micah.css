@@ -18,17 +18,6 @@
 	--boxbg: hsla(217, 90%, 56%, 0.5);
 	--solidboxbg: hsla(217, 90%, 56%, 0.9);
 }
-@media only screen and and (max-width: 75rem) {
-	:root {
-		--frogsize: 15rem;
-	}
-}
-
-@media only screen and (max-width: 55rem) {
-	:root {
-		--frogsize: 25rem;
-	}
-}
 
 body#css-zen-garden {
 	display: grid;
@@ -50,7 +39,7 @@ body#css-zen-garden {
 		grid-template-areas:
 			"introbox introbox"
 			"links    main"
-			"links    main";
+			".        main";
 		background: var(--pagebg);
 		box-shadow: 0rem 0rem 3rem 3rem var(--pagebg);
 		transition: top 0.8s;
@@ -60,7 +49,7 @@ body#css-zen-garden {
 			grid-column: 1 / span 2;
 			grid-row: 1 / span 1;
 			grid-area: introbox;
-			grid-template-columns: auto 25rem;
+			grid-template-columns: auto var(--frogsize);
 			grid-template-rows: auto auto auto;
 			grid-template-areas:
 				"intro    frog"
@@ -71,21 +60,15 @@ body#css-zen-garden {
 		}
 			
 			section.intro#zen-intro>header {
-				grid-column: 1 / span 1;
-				grid-row: 1 / span 1;
 				min-height: calc( var(--frogsize) / 2);
 				grid-area: intro;
 			}
 			section.intro#zen-intro>div.summary#zen-summary {
-				grid-column: 1 / span 1;
-				grid-row: 2 / span 1;
 				min-height: 13rem;
 				min-height: calc( var(--frogsize) / 2);
 				grid-area: summary;
 			}
 			section.intro#zen-intro>div.preamble#zen-preamble {
-				grid-column: 1 / span 3;
-				grid-row: 3 / span 1;
 				grid-area: preamble;
 			}
 		
@@ -110,19 +93,14 @@ body#css-zen-garden {
 		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; 
 	}
 			
-   
-@media only screen and and (max-width: 75rem) {
-	:root {
-		--frogsize: 15rem;
-	}
-}
 
-@media only screen and (max-width: 55rem) {
+@media only screen and (max-width: 75rem) {
 	:root {
-		--frogsize: 25rem;
+		--frogsize: 30%;
 	}
 	div.page-wrapper {
 		top: 0rem;
+		grid-template-columns: auto auto;
 		grid-template-areas:
 			"introbox introbox"
 			"links    links"
@@ -198,7 +176,7 @@ aside.sidebar {
 
 /*  SIDE-BAR HIDE-AWAY ON SMALL DISPLAYS ON DESKTOP COMPUTERS  */
 
-@media only screen and (any-hover) and (max-width: 55rem) {
+@media only screen and (any-hover) and (max-width: 75rem) {
 	aside.sidebar {
 		position: fixed;
 		width: 22rem;
@@ -217,7 +195,7 @@ aside.sidebar {
 }
 
 
-@media only screen and (max-width: 55rem) {
+@media only screen and (max-width: 75rem) {
 	section.intro#zen-intro {
 		background-image: none;
 	}
