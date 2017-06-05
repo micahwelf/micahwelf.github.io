@@ -11,9 +11,9 @@ a.innerHTML = Math.ceil(Math.random * 100);
 b.innerHTML = Math.ceil(Math.random * 100);
 
 var checkAns = function (a, b, ans) {
-  if (a + b) == ans {alert("Right");}
+  if (a + b) == ans.value {alert("Right");}
   else {alert("Wrong");};
-  
+
 }
 btn.onclick = checkAns(a.innerHTML, b.innerHTML, ans.value);
 
