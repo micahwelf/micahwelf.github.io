@@ -13,6 +13,7 @@
 	--pagebg: hsla( 99, 45%, 9%, 1 );
 	--textcolor: hsla( 310, 100%, 52%, 1 );
 	--gutter: 8rem;
+	--gutters: calc( var(--gutter) + var(--gutter) );
 	--font: 'Pt Sans';
 	--boxbg: hsla(217, 90%, 56%, 0.5);
 	--solidboxbg: hsla(217, 90%, 56%, 0.9);
@@ -91,6 +92,8 @@ body#css-zen-garden {
 		grid-area: frog;
 		background-image: url(../magenta-frog.jpg);
 		background-size: cover;
+		width: var(--frogsize);
+		height: var(--frogsize);
 		z-index: 1;
 		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; 
 	}
@@ -100,13 +103,13 @@ body#css-zen-garden {
 }
 
 @media only screen and (max-width: 55rem) {
-	html {
-		--frogsize: calc( 1vw - ( var(--gutter) + var(--gutter) ) );
+	:root {
+		--frogsize: calc( 1vw - var(--gutters) );
 	}
-	body#css-zen-garden {
-		grid-template-columns: 8rem auto 0rem 8rem;
-		grid-template-rows: auto auto;
-	}
+/*	body#css-zen-garden {*/
+/*		grid-template-columns: 8rem auto 0rem 8rem;*/
+/*		grid-template-rows: auto auto;*/
+/*	}*/
 	div.page-wrapper {
 		grid-template-areas:
 			"introbox introbox"
@@ -122,13 +125,13 @@ body#css-zen-garden {
 }
 
 @media only screen and (max-width: 30rem) {
-	html {
+	:root {
 		--gutter: 0rem;
 	}
-	body#css-zen-garden {
-		grid-template-columns: 0rem auto  0rem;
-		grid-template-rows: auto auto;
-	}
+/*	body#css-zen-garden {*/
+/*		grid-template-columns: 0rem auto  0rem;*/
+/*		grid-template-rows: auto auto;*/
+/*	}*/
 }
 
 
