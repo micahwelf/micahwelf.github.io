@@ -96,7 +96,7 @@ body#css-zen-garden {
 
 @media only screen and (max-width: 75rem) {
 	:root {
-		--frogsize: 30%;
+		--frogsize: 30vw;
 	}
 	div.page-wrapper {
 		top: 0rem;
