@@ -84,14 +84,14 @@ body#css-zen-garden {
 		background-image: url(../magenta-frog.jpg);
 		background-size: cover;
 		z-index: 1;
-		box-shadow: 0rem 0rem 2rem 1rem inset var(--pagebg); 
+		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; 
 	}
 	div.extra2 {
 		grid-area: frog;
 /*		background-image: url(../magenta-frog.jpg);*/
 /*		background-size: cover;*/
 		z-index: 1;
-		box-shadow: 0rem 0rem 2rem 1rem inset var(--pagebg); 
+		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; 
 	}
 			
    
