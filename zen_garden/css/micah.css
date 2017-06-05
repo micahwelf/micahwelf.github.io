@@ -27,7 +27,7 @@ body#css-zen-garden {
 
 	div.page-wrapper {
 		position: relative;
-		top: calc( -1 * var(--frogsize);
+		top: calc( -1 * var(--frogsize));
 /*		-25rem;*/
 		display: inline-grid;
 		grid-area: page-wrapper;
