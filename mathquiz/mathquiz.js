@@ -10,6 +10,13 @@ a.innerHTML = Math.ceil(Math.random * 100);
 
 b.innerHTML = Math.ceil(Math.random * 100);
 
+var checkAns = function (a, b, ans) {
+  if (a + b) == ans {alert("Right");}
+  else {alert("Wrong");};
+  
+}
+btn.onclick = checkAns(a.innerHTML, b.innerHTML, ans.value);
+
 var changePage = function() {
   console.log("Function on click activated.");
   console.log(document.body);
