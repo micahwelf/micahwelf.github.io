@@ -122,6 +122,7 @@ body#css-zen-garden {
 		--frogsize: 25rem;
 	}
 	div.page-wrapper {
+		top: 0rem;
 		grid-template-areas:
 			"introbox introbox"
 			"links    links"
@@ -204,13 +205,11 @@ aside.sidebar {
 		height: 90%;
 		bottom: 0rem;
 		left: -21rem;
-		overflow: hidden;
+		overflow-x: hidden;
+		overflow-y: scroll;
 		transition: left 0.8s;
 	}
-	aside.sidebar:hover * {
-		max-width: 20rem;
-	}
-	aside.sidebar:hover {
+	aside.sidebar:hover, aside.sidebar:focus {
 		position: fixed;
 		left: 0rem;
 /*		overflow: visible;*/
