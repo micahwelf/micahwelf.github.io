@@ -12,6 +12,7 @@
 	--frogsize: 25rem;
 	--pagebg: hsla( 99, 45%, 9%, 1 );
 	--textcolor: hsla( 310, 100%, 52%, 1 );
+	--listcolor: 
 	--gutter: 8rem;
 	--gutters: calc( var(--gutter) + var(--gutter) );
 	--font: 'Pt Sans';
@@ -207,12 +208,12 @@ aside.sidebar {
 		left: -21rem;
 		overflow-x: hidden;
 		overflow-y: scroll;
-		transition: left 0.8s;
+		transition: left,background 0.8s;
 	}
 	aside.sidebar:hover, aside.sidebar:focus {
 		position: fixed;
 		left: 0rem;
-/*		overflow: visible;*/
+		background: var(--solidboxbg);
 	}
 }
 
