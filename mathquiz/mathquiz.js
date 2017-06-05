@@ -23,7 +23,7 @@ var checkAns = function () {
   }
 
 }
-btn.onclick = checkAns(a.innerHTML, b.innerHTML, ans.value);
+btn.onclick = checkAns;
 
 var changePage = function() {
   console.log("Function on click activated.");
