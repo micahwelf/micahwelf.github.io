@@ -100,7 +100,7 @@ body#css-zen-garden {
 }
 
 @media only screen and (max-width: 55rem) {
-	:root {
+	html {
 		--frogsize: calc( 1vw - ( var(--gutter) + var(--gutter) ) );
 	}
 	body#css-zen-garden {
@@ -122,7 +122,7 @@ body#css-zen-garden {
 }
 
 @media only screen and (max-width: 30rem) {
-	:root {
+	html {
 		--gutter: 0rem;
 	}
 	body#css-zen-garden {
