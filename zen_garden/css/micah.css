@@ -9,15 +9,15 @@
 	font-family: 'Kaushan Script', cursive;
 */
 :root {
-	--frogimgsize: 25rem;
+	--frogsize: 25rem;
 	--pagebg: hsla( 99, 45%, 9%, 1 );
 	--textcolor: hsla( 310, 100%, 52%, 1 );
-	
+	--gutter: 8rem;
 }
 
 body#css-zen-garden {
 	display: grid;
-	grid-template-columns: 8rem auto var(--frogimgsize) 8rem;
+	grid-template-columns: var(--gutter) auto var(--frogsize) var(--gutter);
 	grid-template-rows: 25rem auto;
 	grid-template-areas:
 		"left-gutter .            frog         right-gutter"
@@ -27,7 +27,8 @@ body#css-zen-garden {
 
 	div.page-wrapper {
 		position: relative;
-		top: -25rem;
+		top: calc( -1 * var(--frogsize);
+/*		-25rem;*/
 		display: inline-grid;
 		grid-area: page-wrapper;
 /*		grid-column: 2 / span 2;*/
