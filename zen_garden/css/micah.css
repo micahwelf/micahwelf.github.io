@@ -51,6 +51,7 @@ body#css-zen-garden {
 				"summary frog"
 				"preamble preamble";
 			background: none;
+			box-shadow: none;
 		}
 			
 			section.intro#zen-intro>header {
