@@ -14,7 +14,7 @@ body#css-zen-garden {
 	grid-template-columns: 8rem auto 25rem 8rem;
 	grid-template-rows: 25rem auto;
 	grid-template-areas:
-		"left-gutter . frog         right-gutter"
+		"left-gutter .            frog         right-gutter"
 		"left-gutter page-wrapper page-wrapper right-gutter";
 	margin: 0rem;
 	background: none;
@@ -40,7 +40,7 @@ body#css-zen-garden {
 			grid-template-areas:
 				"intro frog"
 				"summary frog"
-				"preamble preamble;
+				"preamble preamble";
 		}
 			
 			section.intro#zen-intro>header {
