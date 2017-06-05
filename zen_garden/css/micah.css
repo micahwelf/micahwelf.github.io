@@ -8,10 +8,14 @@
 	font-family: 'Frank Ruhl Libre', sans-serif;
 	font-family: 'Kaushan Script', cursive;
 */
+:root {
+	frogimgsize: 25rem;
+	
+}
 
 body#css-zen-garden {
 	display: grid;
-	grid-template-columns: 8rem auto 25rem 8rem;
+	grid-template-columns: 8rem auto var(frogimgsize) 8rem;
 	grid-template-rows: 25rem auto;
 	grid-template-areas:
 		"left-gutter .            frog         right-gutter"
@@ -21,6 +25,8 @@ body#css-zen-garden {
 }
 
 	div.page-wrapper {
+		position: relative;
+		top: -25rem;
 		display: inline-grid;
 		grid-area: page-wrapper;
 /*		grid-column: 2 / span 2;*/
