@@ -12,7 +12,6 @@
 	--frogsize: 25rem;
 	--pagebg: hsla( 99, 45%, 9%, 1 );
 	--textcolor: hsla( 310, 100%, 52%, 1 );
-	--listcolor: 
 	--gutter: 8rem;
 	--gutters: calc( var(--gutter) + var(--gutter) );
 	--font: 'Pt Sans';
