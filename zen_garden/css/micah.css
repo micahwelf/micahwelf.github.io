@@ -24,6 +24,7 @@ body#css-zen-garden {
 	grid-template-columns: var(--gutter) auto var(--frogsize) var(--gutter);
 	grid-template-rows: var(--frogsize) auto;
 	grid-template-areas:
+	
 		"left-gutter .            frog         right-gutter"
 		"left-gutter page-wrapper page-wrapper right-gutter";
 	margin: 0rem;
