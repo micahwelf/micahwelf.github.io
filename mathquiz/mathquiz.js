@@ -1,3 +1,6 @@
+
+var heading = document.querySelector("#title");
+
 function changePage() {
   console.log("Function on click activated.");
   console.log(document.body);
@@ -6,9 +9,6 @@ function changePage() {
   document.body.style.fontFamily = "Arial";
 
   var x = 5;
-
-  var heading = document.querySelector("#title");
-
   console.log(heading);
 
   heading.style.color = "blue";
