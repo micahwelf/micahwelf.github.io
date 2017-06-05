@@ -13,6 +13,7 @@
 	--pagebg: hsla( 99, 45%, 9%, 1 );
 	--textcolor: hsla( 310, 100%, 52%, 1 );
 	--gutter: 8rem;
+	--font: 'Pt Sans';
 }
 
 body#css-zen-garden {
@@ -85,6 +86,13 @@ body#css-zen-garden {
 		z-index: 1;
 		box-shadow: 0rem 0rem 2rem 1rem inset hsla( 99, 45% 9%, 1 ); 
 	}
+	div.extra2 {
+		grid-area: frog;
+/*		background-image: url(../magenta-frog.jpg);*/
+/*		background-size: cover;*/
+		z-index: 1;
+		box-shadow: 0rem 0rem 2rem 1rem inset hsla( 99, 45% 9%, 1 ); 
+	}
 			
    
 @media only screen and not (any-hover) and (max-width: 55rem) {
@@ -113,7 +121,7 @@ body#css-zen-garden {
 
 
 body#css-zen-garden * {
-	font-family: 'PT Sans', sans-serif;
+	font-family: var(--font), sans-serif;
 	text-shadow: 1pt 1pt 1pt rgb(21, 0, 11);
 }
 
