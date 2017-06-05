@@ -13,8 +13,8 @@ body#css-zen-garden {
 	display: grid;
 	grid-template-columns: 8rem auto 25rem 8rem;
 	grid-template-rows: 25rem auto;
-	grid-areas:
-		"left-gutter page-wrapper frog right-gutter"
+	grid-template-areas:
+		"left-gutter page-wrapper frog         right-gutter"
 		"left-gutter page-wrapper page-wrapper right-gutter";
 	margin: 0rem;
 	background: none;
@@ -27,6 +27,7 @@ body#css-zen-garden {
 /*		grid-row: 1 / span 2;*/
 		grid-template-columns: 20rem auto;
 		grid-template-rows: auto auto auto;
+		
 		background: hsla( 99, 45%, 9%, 1 );
 		box-shadow: 0rem 0rem 3rem 2rem hsla( 99, 45%, 9%, 1 );
 	}
