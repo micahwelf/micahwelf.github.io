@@ -38,7 +38,7 @@ body#css-zen-garden {
 		grid-template-rows: auto auto auto;
 		grid-template-areas: "u ouu";
 		background: hsla( 99, 45%, 9%, 1 );
-		box-shadow: 0rem 0rem 3rem 2rem var(--pagebg);
+		box-shadow: 0rem 0rem 3rem 3rem var(--pagebg);
 	}
 		section.intro#zen-intro {
 			display: inline-grid;
