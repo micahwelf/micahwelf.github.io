@@ -21,7 +21,7 @@
 body#css-zen-garden {
 	display: grid;
 	grid-template-columns: var(--gutter) auto var(--frogsize) var(--gutter);
-	grid-template-rows: 25rem auto;
+	grid-template-rows: var(--frogsize) auto;
 	grid-template-areas:
 		"left-gutter .            frog         right-gutter"
 		"left-gutter page-wrapper page-wrapper right-gutter";
@@ -41,6 +41,7 @@ body#css-zen-garden {
 			"links    main";
 		background: var(--pagebg);
 		box-shadow: 0rem 0rem 3rem 3rem var(--pagebg);
+		transition: top 0.8s;
 	}
 		section.intro#zen-intro {
 			display: inline-grid;
@@ -60,13 +61,14 @@ body#css-zen-garden {
 			section.intro#zen-intro>header {
 				grid-column: 1 / span 1;
 				grid-row: 1 / span 1;
-				min-height: 12rem;
+				min-height: calc( var(--frogsize) / 2);
 				grid-area: intro;
 			}
 			section.intro#zen-intro>div.summary#zen-summary {
 				grid-column: 1 / span 1;
 				grid-row: 2 / span 1;
 				min-height: 13rem;
+				min-height: calc( var(--frogsize) / 2);
 				grid-area: summary;
 			}
 			section.intro#zen-intro>div.preamble#zen-preamble {
@@ -92,26 +94,15 @@ body#css-zen-garden {
 		z-index: 1;
 		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; 
 	}
-/*	div.extra2 {*/
-/*		grid-area: frog;*/
-/*		background-image: url(../magenta-frog.jpg);*/
-/*		background-size: cover;*/
-/*		z-index: 1;*/
-/*		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; */
-/*	}*/
 			
    
 @media only screen and not (any-hover) and (max-width: 55rem) {
-/*	aside.sidebar {*/
-/*		grid-column-end: span 2;*/
-/*	}*/
-/*/*	.main#zen-supporting {*/*/
-/*		grid-column: 1 / span 2;*/
-/*		grid-row: 3 / span 1;*/
-/*	}*/
 }
 
 @media only screen and (max-width: 55rem) {
+	:root {
+		--frogsize: calc( 1vw - ( var(--gutter) + var(--gutter) ) );
+	}
 	body#css-zen-garden {
 		grid-template-columns: 8rem auto 0rem 8rem;
 		grid-template-rows: auto auto;
@@ -131,16 +122,13 @@ body#css-zen-garden {
 }
 
 @media only screen and (max-width: 30rem) {
+	:root {
+		--gutter: 0rem;
+	}
 	body#css-zen-garden {
-		grid-template-columns: 0rem auto 0rem 0rem;
+		grid-template-columns: 0rem auto  0rem;
 		grid-template-rows: auto auto;
 	}
-/*	div.page-wrapper {*/
-/*		grid-template-areas:*/
-/*			"introbox introbox"*/
-/*			"links    links"*/
-/*			"main     main";*/
-/*	}*/
 }
 
 
@@ -165,15 +153,6 @@ section.intro#zen-intro {
 	order: 0;
 	margin: 1ex;
 }	
-
-section.intro#zen-intro>header,
-section.intro#zen-intro>div.summary#zen-summary {
-}
-
-section.intro#zen-intro>header {
-	text-wrap: none;
-	overflow: visible;
-}
 
 .main#zen-supporting {
 	position: static;
