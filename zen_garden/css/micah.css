@@ -114,7 +114,7 @@ body#css-zen-garden {
 	}
 }
 
-@media only screen and (max-width: 30rem) {
+@media only screen and (max-width: 40rem) {
 	:root {
 		--gutter: 0rem;
 	}
@@ -167,7 +167,7 @@ aside.sidebar {
 	color: hsla( 106, 50%, 3%, 1 );
 	text-shadow: 1pt 1pt rgba(21, 0, 11, 0.7);
 	text-shadow: 1pt 1pt 1pt rgba(21, 0, 11, 0.7);
-	border-radius: 0rem 1rem 1rem 0rem;
+	border-radius: 1rem 1rem 1rem 1rem;
 	margin-right: 1ex;
 	background: hsla(217, 90%, 56%, 0.5);
 }
@@ -186,6 +186,7 @@ aside.sidebar {
 		overflow-x: hidden;
 		overflow-y: auto;
 		transition: left,background 0.8s;
+		border-radius: 0rem 1rem 1rem 0rem;
 	}
 	aside.sidebar:hover, aside.sidebar:focus {
 		position: fixed;
@@ -195,15 +196,15 @@ aside.sidebar {
 }
 
 
-@media only screen and (max-width: 75rem) {
-	section.intro#zen-intro {
-		background-image: none;
-	}
-}
+/*@media only screen and (max-width: 75rem) {*/
+/*	section.intro#zen-intro {*/
+/*		background-image: none;*/
+/*	}*/
+/*}*/
 
-@media only screen and (max-width: 30rem) {
-	section.intro#zen-intro {
-		background-image: none;
-	}
-}
+/*@media only screen and (max-width: 30rem) {*/
+/*	section.intro#zen-intro {*/
+/*		background-image: none;*/
+/*	}*/
+/*}*/
 
