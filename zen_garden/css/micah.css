@@ -86,13 +86,13 @@ body#css-zen-garden {
 		z-index: 1;
 		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; 
 	}
-	div.extra2 {
-		grid-area: frog;
+/*	div.extra2 {*/
+/*		grid-area: frog;*/
 /*		background-image: url(../magenta-frog.jpg);*/
 /*		background-size: cover;*/
-		z-index: 1;
-		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; 
-	}
+/*		z-index: 1;*/
+/*		box-shadow: 0rem 0rem 2rem 1rem var(--pagebg) inset; */
+/*	}*/
 			
    
 @media only screen and not (any-hover) and (max-width: 55rem) {
