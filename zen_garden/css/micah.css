@@ -46,6 +46,7 @@ body#css-zen-garden {
 				"intro frog"
 				"summary frog"
 				"preamble preamble";
+			background: none;
 		}
 			
 			section.intro#zen-intro>header {
@@ -53,7 +54,6 @@ body#css-zen-garden {
 				grid-row: 1 / span 1;
 				min-height: 12rem;
 				grid-area: intro;
-				background: none;
 			}
 			section.intro#zen-intro>div.summary#zen-summary {
 				grid-column: 1 / span 1;
