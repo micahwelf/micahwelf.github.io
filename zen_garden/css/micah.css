@@ -64,7 +64,6 @@ body#css-zen-garden {
 				grid-area: intro;
 			}
 			section.intro#zen-intro>div.summary#zen-summary {
-				min-height: 13rem;
 				min-height: calc( var(--frogsize) / 2);
 				grid-area: summary;
 			}
@@ -96,10 +95,10 @@ body#css-zen-garden {
 
 @media only screen and (max-width: 75rem) {
 	:root {
-		--frogsize: 30vw;
+		--frogsize: 25vw;
 	}
 	div.page-wrapper {
-		top: 0rem;
+		/*top: 0rem;*/
 		grid-template-columns: auto auto;
 		grid-template-areas:
 			"introbox introbox"
@@ -111,6 +110,14 @@ body#css-zen-garden {
 			"intro    frog"
 			"summary  summary"
 			"preamble preamble";
+	}
+
+	section.intro#zen-intro>header {
+		min-height: var(--frogsize);
+	}
+
+	section.intro#zen-intro>div.summary#zen-summary {
+		min-height: calc( var(--frogsize) / 2);
 	}
 }
 
