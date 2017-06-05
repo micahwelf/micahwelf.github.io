@@ -108,7 +108,7 @@ body#css-zen-garden {
 	}
 	section.intro#zen-intro {
 		grid-template-areas:
-			"intro    intro"
+			"intro    frog"
 			"summary  summary"
 			"preamble preamble";
 	}
