@@ -15,3 +15,5 @@ var changePage = function() {
 
   heading.innerHTML = "New Title set by JS";
 };
+
+heading.onclick = changePage;
