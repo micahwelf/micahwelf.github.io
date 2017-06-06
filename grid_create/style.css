@@ -1,3 +1,6 @@
+:root {
+  --squareSize: 4rem;
+}
 .r1 {
   border-bottom: 1pt;
 }
@@ -16,4 +19,14 @@
 }
 .c3 {
   border-left: 1pt;
+}
+.square.playerX {
+  background-color: red;
+}
+.square.playerO {
+  background-color: green;
+}
+.square {
+  width: var(--squareSize);
+  height: var(--squareSize);
 }
