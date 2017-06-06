@@ -1,6 +1,6 @@
 :root {
   --squareSize: 4rem;
-  --boxborder: 3pt black;
+  --boxborder: 3pt black solid;
 }
 section {
   text-align: center;
@@ -25,6 +25,7 @@ section {
 }
 .r3 {
   border-top: var(--boxborder);
+}
 }.c1 {
   display: inline-block;
   clear:left;
