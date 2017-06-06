@@ -1,28 +1,37 @@
 :root {
   --squareSize: 4rem;
 }
+#board {
+  display: grid;
+  grid-template-columns: var(--squareSize) var(--squareSize) var(--squareSize);
+  grid-template-rows: var(--squareSize) var(--squareSize) var(--squareSize);
+  grid-template-areas:
+  "r1c1 r1c2 r1c3"
+  "r2c1 r2c2 r2c3"
+  "r3c1 r3c2 r3c3";
+}
 .r1 {
-  border-bottom: 1pt;
+  border-bottom: 1pt black;
 }
 .r2 {
-  border-top: 1pt;
-  border-bottom: 1pt;
+  border-top: 1pt black;
+  border-bottom: 1pt black;
 }
 .r3 {
-  border-top: 1pt;
+  border-top: 1pt black;
 }.c1 {
   display: inline-block;
   clear:left;
-  border-right: 1pt;
+  border-right: 1pt black;
 }
 .c2 {
   display: inline-block;
-  border-left: 1pt;
-  border-right: 1pt;
+  border-left: 1pt black;
+  border-right: 1pt black;
 }
 .c3 {
   display: inline-block;
-  border-left: 1pt;
+  border-left: 1pt black;
 }
 .square.playerX {
   background-color: red;
@@ -33,4 +42,7 @@
 .square {
   width: var(--squareSize);
   height: var(--squareSize);
+  vertical-align: middle;
+  text-align: center;
+  font-size: calc(var(--squareSize) - 1rem);
 }
