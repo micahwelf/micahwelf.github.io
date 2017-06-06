@@ -1,5 +1,6 @@
 :root {
   --squareSize: 4rem;
+  --boxborder: 3pt black;
 }
 section {
   text-align: center;
@@ -16,32 +17,32 @@ section {
   height: auto;
 }
 .r1 {
-  border-bottom: 1pt black;
+  border-bottom: var(--boxborder);
 }
 .r2 {
-  border-top: 1pt black;
-  border-bottom: 1pt black;
+  border-top: var(--boxborder);
+  border-bottom: var(--boxborder);
 }
 .r3 {
-  border-top: 1pt black;
+  border-top: var(--boxborder);
 }.c1 {
   display: inline-block;
   clear:left;
-  border-right: 1pt black;
+  border-right: var(--boxborder);
 }
 .c2 {
   display: inline-block;
-  border-left: 1pt black;
-  border-right: 1pt black;
+  border-left: var(--boxborder);
+  border-right: var(--boxborder);
 }
 .c3 {
   display: inline-block;
-  border-left: 1pt black;
+  border-left: var(--boxborder);
 }
 .square {
   width: var(--squareSize);
   height: var(--squareSize);
-  vertical-align: middle;
+  vertical-align: bottom;
   text-align: center;
   font-size: calc(var(--squareSize) - 1rem);
   background-color: lightgray;
@@ -49,9 +50,7 @@ section {
 
 .square.playerX {
   background-color: red;
-  content: "X";
 }
 .square.playerO {
   background-color: green;
-  content: "O";
 }
