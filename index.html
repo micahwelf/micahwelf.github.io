@@ -58,10 +58,13 @@
 			margin-bottom: 15px;
 		}
 		
-		h2+section {
+		.menu h2+section {
 			height: 1rem;
+			overflow-y:hidden;
+			transition: height 0.9s;
 		}
-		h2:hover+section, h2:focus+section, h2:active+section, h2+section:hover, h2+section:focus, h2+section:active {
+		.menu:hover h2+section, .menu:focus h2+section, .menu:active+section,
+		.menu h2+section:hover, .menu h2+section:focus, .menu h2+section:active {
 			height: auto;
 		}
 
@@ -103,18 +106,21 @@
 			<h1>Magenta Frogs</h1>
 			<p>Micah, Page, Maryn, and Wes</p>
 		</header>
-
+		<span class="menu">
 		<h2>Code School Team Projects</h2>
-		<section>
-			<p><a href="form_activity/">Form beautification</a></p>
-			<p><a href="movie_page/">Favorite Movie(s)</a></p>
-			<p><a href="zen_garden/">Zen Garden Stylesheets</a></p>
-		</section>
-		<h2>Code School Personal Projects (Micah)</h2>
-		<section>
-			<p><a href="movie_page/">Favorite Movie(s)</a></p>
-			<p><a href="mathquiz/">Math Quiz (JS)</a></p>
-		</section>
+			<section>
+				<p><a href="form_activity/">Form beautification</a></p>
+				<p><a href="movie_page/">Favorite Movie(s)</a></p>
+				<p><a href="zen_garden/">Zen Garden Stylesheets</a></p>
+			</section>
+		</span>
+		<span class="menu">
+			<h2>Code School Personal Projects (Micah)</h2>
+			<section>
+				<p><a href="movie_page/">Favorite Movie(s)</a></p>
+				<p><a href="mathquiz/">Math Quiz (JS)</a></p>
+			</section>
+		</span>
 	</div>
 
 	<div class="frog"></div>
