@@ -1,0 +1,12 @@
+#!/bin/zsh
+function {
+	local msg
+	while true
+	do
+		read 'msg?Commit Message => '
+		git pull;
+		git commit -m "$msg" .;
+		git push;
+	done
+}
+		

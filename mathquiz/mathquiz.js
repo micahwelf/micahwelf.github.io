@@ -6,14 +6,14 @@ var numB = document.querySelector("#b");
 var userAns = document.querySelector("#answer");
 var btn = document.querySelector("#check-answer");
 
-var a = Math.ceil(Math.random() * 100);
-var b = Math.ceil(Math.random() * 100);
+var a = 0.0;
+var b = 0.0;
 
 var newNums = function () {
   a = Math.ceil(Math.random() * 100);
-  numA = toString(a);
+  numA.innerHTML = toString(a);
   b = Math.ceil(Math.random() * 100);
-  numB = toString(b);
+  numB.innerHTML = toString(b);
 };
 
 newNums();
