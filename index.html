@@ -54,25 +54,25 @@
 
 			font-size: 1.4rem;
 
-			padding: 1.5rem 2rem;
+			padding: 1rem 1rem;
 		}
 		
-		.menu h2+section {
+		.menu > h2+section {
 			height: .01rem;
 			visibility: hidden;
 			overflow-y:hidden;
 			transition: height 0.9s;
 			padding: 1rem;
 		}
-		.menu:hover h2+section, .menu:focus h2+section, .menu:active+section,
-		.menu h2+section:hover, .menu h2+section:focus, .menu h2+section:active {
+		.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
+		.menu > h2 + section:hover, .menu > h2 + section:focus, .menu > h2 + section:active {
 			height: auto;
 			visibility: visible;
 		}
 
 		section {
-			padding-left: .7rem;
-			padding-bottom: 1rem;
+			padding-left: .5rem;
+			padding-bottom: .5rem;
 		}
 
 		section p {
