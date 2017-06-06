@@ -1,14 +1,19 @@
 :root {
   --squareSize: 4rem;
 }
+section {
+  text-align: center;
+}
 #board {
-  display: grid;
+  display: inline-grid;
   grid-template-columns: var(--squareSize) var(--squareSize) var(--squareSize);
   grid-template-rows: var(--squareSize) var(--squareSize) var(--squareSize);
   grid-template-areas:
   "r1c1 r1c2 r1c3"
   "r2c1 r2c2 r2c3"
   "r3c1 r3c2 r3c3";
+  width: auto;
+  height: auto;
 }
 .r1 {
   border-bottom: 1pt black;
@@ -33,16 +38,20 @@
   display: inline-block;
   border-left: 1pt black;
 }
-.square.playerX {
-  background-color: red;
-}
-.square.playerO {
-  background-color: green;
-}
 .square {
   width: var(--squareSize);
   height: var(--squareSize);
   vertical-align: middle;
   text-align: center;
   font-size: calc(var(--squareSize) - 1rem);
+  background-color: lightgray;
+}
+
+.square.playerX {
+  background-color: red;
+  content: "X";
+}
+.square.playerO {
+  background-color: green;
+  content: "O";
 }
