@@ -27,8 +27,8 @@
 
 			width: 55%;
 
-			margin-bottom: 3rem; /* put it up a bit */
-			padding: 2rem 3rem;
+			margin-bottom: 1rem; /* put it up a bit */
+			padding: .75rem 1rem;
 
 			z-index: 30;
 		}
@@ -38,8 +38,8 @@
 
 			border-bottom: 1px solid black;
 
-			padding-bottom: 1rem;
-			margin-bottom: 3rem;
+			padding-bottom: 0.5rem;
+			margin-bottom: 1.5rem;
 		}
 
 		header h1 {
@@ -54,23 +54,29 @@
 
 			font-size: 1.4rem;
 
-			padding: 1rem 1rem;
+			padding: 0.5rem 0.5rem;
+		}
+		
+		.menu {
+			position: relative;
 		}
 		
 		.menu, h2, section {
 			transition: top,height,visibility 0.9s;
 		}
 		.menu > h2+section {
+			position: absolute;
 			height: .01rem;
 			visibility: hidden;
 			overflow-y:hidden;
 			padding: 1rem;
+			top: 0.5rem;
+			left: 0.5rem;
 		}
 		.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
 		.menu > h2 + section:hover, .menu > h2 + section:focus, .menu > h2 + section:active {
 			position: relative;
 			z-index: 5;
-			top: -2rem;
 			min-height: 30vh;
 			visibility: visible;
 		}
