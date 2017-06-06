@@ -27,8 +27,8 @@
 
 			width: 55%;
 
-			margin-bottom: 35px; /* put it up a bit */
-			padding: 25px 55px;
+			margin-bottom: 3rem; /* put it up a bit */
+			padding: 2rem 5rem;
 
 			z-index: 30;
 		}
@@ -38,13 +38,13 @@
 
 			border-bottom: 1px solid black;
 
-			padding-bottom: 10px;
-			margin-bottom: 40px;
+			padding-bottom: 1rem;
+			margin-bottom: 4rem;
 		}
 
 		header h1 {
 			margin-bottom: .5rem;
-			font-size: 2.2em;
+			font-size: 2.2rem;
 		}
 
 		h2 {
@@ -52,7 +52,7 @@
 			display: inline-block;
 			background-color: rgb(235, 235, 235);
 
-			font-size: 1.4em;
+			font-size: 1.4rem;
 
 			padding: 1.5rem 2rem;
 		}
@@ -69,13 +69,13 @@
 		}
 
 		section {
-			padding-left: 2rem;
-			padding-bottom: 2.5rem;
+			padding-left: .7rem;
+			padding-bottom: 1rem;
 		}
 
 		section p {
-			padding-bottom: 0.9rem;
-			font-size: 1.4em;
+			padding-bottom: 0.5rem;
+			font-size: 1.4rem;
 		}
 
 		section a {
@@ -86,8 +86,8 @@
 			position: absolute;
 			background-image: url("http://www.pinkfrogservices.com/wp-content/uploads/2016/12/pinkfrog3d_wavingfinal001-LARGE-CLEAR.png");
 			background-size: contain;
-			min-width: 18.75rem;
-			min-height: 25rem;
+			min-width: 17.5rem;
+			min-height: 13.125rem;
 
 			-moz-transform: scaleY(-1);
 			-o-transform: scaleY(-1);
@@ -123,12 +123,12 @@
 		</span>
 	</div>
 
+	<!-- <div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
-	<div class="frog"></div>
-	<div class="frog"></div>
+	<div class="frog"></div> -->
 	<div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
@@ -148,7 +148,7 @@
 		window.setTimeout(function() {
 			window.setInterval(function() {
 				for (let frog of document.getElementsByClassName("frog")) {
-					frog.fallPos += 2;
+					frog.fallPos += 1;
 
 					if (frog.fallPos > window.innerHeight) {
 						frog.fallPos = -300;
