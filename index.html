@@ -58,7 +58,7 @@
 		}
 		
 		.menu, h2, section {
-			transition: height,visibility 0.9s;
+			transition: top,height,visibility 0.9s;
 		}
 		.menu > h2+section {
 			height: .01rem;
@@ -68,7 +68,10 @@
 		}
 		.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
 		.menu > h2 + section:hover, .menu > h2 + section:focus, .menu > h2 + section:active {
-			height: auto;
+			position: relative;
+			z-index: 5;
+			top: -2rem;
+			min-height: 30vh;
 			visibility: visible;
 		}
 
