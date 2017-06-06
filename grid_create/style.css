@@ -1,0 +1,19 @@
+.r1 {
+  border-bottom: 1pt;
+}
+.r2 {
+  border-top: 1pt;
+  border-bottom: 1pt;
+}
+.r3 {
+  border-top: 1pt;
+}.c1 {
+  border-right: 1pt;
+}
+.c2 {
+  border-left: 1pt;
+  border-right: 1pt;
+}
+.c3 {
+  border-left: 1pt;
+}
