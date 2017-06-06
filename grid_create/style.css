@@ -11,14 +11,17 @@
 .r3 {
   border-top: 1pt;
 }.c1 {
-  float:left;
+  display: inline-block;
+  clear:left;
   border-right: 1pt;
 }
 .c2 {
+  display: inline-block;
   border-left: 1pt;
   border-right: 1pt;
 }
 .c3 {
+  display: inline-block;
   border-left: 1pt;
 }
 .square.playerX {
