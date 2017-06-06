@@ -57,11 +57,13 @@
 			padding: 1rem 1rem;
 		}
 		
+		.menu, h2, section {
+			transition: height,visibility 0.9s;
+		}
 		.menu > h2+section {
 			height: .01rem;
 			visibility: hidden;
 			overflow-y:hidden;
-			transition: height 0.9s;
 			padding: 1rem;
 		}
 		.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
