@@ -27,20 +27,18 @@ section {
   border-top: var(--boxborder);
 }
 }.c1 {
-  display: inline-block;
   clear:left;
   border-right: var(--boxborder);
 }
 .c2 {
-  display: inline-block;
   border-left: var(--boxborder);
   border-right: var(--boxborder);
 }
 .c3 {
-  display: inline-block;
   border-left: var(--boxborder);
 }
 .square {
+  display: inline-flex;
   width: var(--squareSize);
   height: var(--squareSize);
   vertical-align: bottom;
