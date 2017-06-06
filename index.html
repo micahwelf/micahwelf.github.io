@@ -27,8 +27,8 @@
 
 			width: 55%;
 
-			margin-bottom: 35px; /* put it up a bit */
-			padding: 25px 55px;
+			margin-bottom: 1rem; /* put it up a bit */
+			padding: .75rem 1rem;
 
 			z-index: 30;
 		}
@@ -38,13 +38,13 @@
 
 			border-bottom: 1px solid black;
 
-			padding-bottom: 10px;
-			margin-bottom: 40px;
+			padding-bottom: 0.5rem;
+			margin-bottom: 1.5rem;
 		}
 
 		header h1 {
-			margin-bottom: 5px;
-			font-size: 2.2em;
+			margin-bottom: .5rem;
+			font-size: 2.2rem; 
 		}
 
 		h2 {
@@ -52,20 +52,43 @@
 			display: inline-block;
 			background-color: rgb(235, 235, 235);
 
-			font-size: 1.4em;
+			font-size: 1.4rem;
 
-			padding: 10px 15px;
-			margin-bottom: 15px;
+			padding: 0.5rem 0.5rem;
+		}
+		
+		.menu {
+			position: relative;
+		}
+		
+		.menu, h2, section {
+			transition: top,height,visibility 0.9s;
+		}
+		.menu > h2+section {
+			position: absolute;
+			height: .01rem;
+			visibility: hidden;
+			overflow-y:hidden;
+			padding: 1rem;
+			top: 0.5rem;
+			left: 0.5rem;
+		}
+		.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
+		.menu > h2 + section:hover, .menu > h2 + section:focus, .menu > h2 + section:active {
+			position: relative;
+			z-index: 5;
+			min-height: 30vh;
+			visibility: visible;
 		}
 
 		section {
-			margin-left: 15px;
-			margin-bottom: 20px;
+			padding-left: .5rem;
+			padding-bottom: .5rem;
 		}
 
 		section p {
-			margin-bottom: 7px;
-			font-size: 1.4em;
+			padding-bottom: 0.5rem;
+			font-size: 1.4rem;
 		}
 
 		section a {
@@ -76,8 +99,8 @@
 			position: absolute;
 			background-image: url("http://www.pinkfrogservices.com/wp-content/uploads/2016/12/pinkfrog3d_wavingfinal001-LARGE-CLEAR.png");
 			background-size: contain;
-			min-width: 150px;
-			min-height: 200px;
+			min-width: 17.5rem;
+			min-height: 13.125rem;
 
 			-moz-transform: scaleY(-1);
 			-o-transform: scaleY(-1);
@@ -96,21 +119,49 @@
 			<h1>Magenta Frogs</h1>
 			<p>Micah, Page, Maryn, and Wes</p>
 		</header>
-
-		<h2>Code School Projects</h2>
-		<section>
-			<p><a href="form_activity/">Form beautification</a></p>
-			<p><a href="movie_page/">Favorite Movie(s)</a></p>
-			<p><a href="zen_garden/">Zen Garden Stylesheets</a></p>
-		</section>
+		<span class="menu">
+			<h2>Code School Team Projects</h2>
+			<section>
+				<span class="menu">
+					<h2>Week 1</h2>
+					<section>
+						<p><a href="form_activity/">Form beautification</a></p>
+						<p><a href="zen_garden/">Zen Garden Stylesheets</a></p>
+					</section>
+				</span>
+			</section>
+		</span>
+		<span class="menu">
+			<h2>Code School Personal Projects (Micah)</h2>
+			<section>
+				<span class="menu">
+					<h2>Week 1</h2>
+					<section>
+						<p><a href="movie_page/">Favorite Movie(s)</a></p>
+					</section>
+				</span>
+				<span class="menu">
+					<h2>Week 2</h2>
+					<section>
+						<p><a href="mathquiz/">Math Quiz (JS)</a></p>
+					</section>
+				</span>
+				<span class="menu">
+					<h2>Week 3</h2>
+					<section>
+						
+					</section>
+				</span>
+			</section>
+		</span>
 	</div>
 
+	<!-- <div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
-	<div class="frog"></div>
-	<div class="frog"></div>
+	<div class="frog"></div> -->
 	<div class="frog"></div>
 	<div class="frog"></div>
 	<div class="frog"></div>
@@ -130,7 +181,7 @@
 		window.setTimeout(function() {
 			window.setInterval(function() {
 				for (let frog of document.getElementsByClassName("frog")) {
-					frog.fallPos += 2;
+					frog.fallPos += 1;
 
 					if (frog.fallPos > window.innerHeight) {
 						frog.fallPos = -300;
