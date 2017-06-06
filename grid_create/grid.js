@@ -1,6 +1,6 @@
 var colorX = "rgba(255,0,0,0.9)";
 var colorO = "rgba(0,255,0,0.9)";
-var boxes = document.querySelectorAll("square");
+var boxes = document.querySelectorAll(".square");
 boxes.forEach(function (square) {
   square.onclick = function () {
     console.log(square);
