@@ -67,7 +67,6 @@ var setRowNumbers = function(row, numbers) {
    for (var col  = 0 ; col < 4 ; col ++ ) {
       var key = tileKey(col, row);
       virtualBoard[key] = numbers[col];
-      }
    }
 };
 
