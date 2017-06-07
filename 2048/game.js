@@ -103,7 +103,7 @@ var assignValue = function (row, col, value) {
 
 createBoard();
 
-assignValue();
+assignValue(1,1,2);
 
 updateBoard();
 console.log(virtualBoard);
