@@ -22,21 +22,22 @@ var divCell = function (row,col) {
 }
 
 var getKey = function (row,col) {
-   return "tile" + row.toString + "-" + col.toString;
+   return "tile-" + row.toString + "-" + col.toString;
 }
 
 var virtualCell = function (row,col) {
-
+   return virtualBoard[getKey(row,col)]
 }
 
 var updateBoard = function() {
    for (var row = 0; row < 4 ; row++ ) {
       for (var col = 0 ; col < 4 ; col++) {
-         var key = "tile" + col + "-" + row;
-         var value = board[key];
+         var key = "tile-" + col + "-" + row;
+         var value = virtualBoard[key];
          if (value) {
             // set innerHTML
             // other things
+            divCell((row + 1), (col + 1)).innerHTML = virtualCell((row + 1), (col + 1));
          } else {
             // handle NULL value;
          }
@@ -45,11 +46,14 @@ var updateBoard = function() {
 }
 
 var addTile = function () {
-   virtualBoard["tile1-1"] = 4;
+   virtualBoard["tile-1-1"] = 4;
 };
 
 
 createBoard();
 
 addTile();
+
+updateBoard();
 console.log(virtualBoard);
+console.log(divBoard);
