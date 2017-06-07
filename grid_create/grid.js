@@ -5,16 +5,15 @@ var playerX = "playerX";
 var playerO = "playerO";
 var boxes = document.querySelectorAll(".square");
 var row_wrap = Math.sqrt(boxes.length);
-var rows;
-for (var i = 0; i < boxes.length; i++) {
-   if ((i % row_wrap) == 0) {
-      var r;
-   }
-   r[(i%row_wrap)] = boxes[i];
-   if (((i + 1) % row_wrap) == 0) {
-      var rows[(i / row_wrap)] = r;
-   }
-}
+var row1 = document.querySelectorAll(".r1");
+var row2 = document.querySelectorAll(".r2");
+var row3 = document.querySelectorAll(".r3");
+var col1 = document.querySelectorAll(".c1");
+var col2 = document.querySelectorAll(".c2");
+var col3 = document.querySelectorAll(".c3");
+var diag1 = [row1[0], row2[1], row3[2]];
+var diag2 = [row3[0], row2[1], row1[0]];
+
 boxes.forEach(function (square) {
    square.onclick = function () {
       console.log(square);
