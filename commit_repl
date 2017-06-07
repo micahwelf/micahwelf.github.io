@@ -5,6 +5,7 @@ function {
 	do
 		read 'msg?Commit Message => '
 		git pull;
+		git add *(/);
 		git commit -m "$msg" .;
 		git push;
 	done
