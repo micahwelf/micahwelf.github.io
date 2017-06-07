@@ -16,9 +16,9 @@ var diag2 = [row3[0], row2[1], row1[0]];
 var winningSets = [row1, row2, row3, col1, col2, col3, diag1, diag2];
 
 var testWinner = function () {
-   for (var i = 0;  i < winningSets.length;  i++) {
-      null;
-   }
+   winningSets.forEach( function(testSet) {
+      console.log (testSet);
+   })
 };
 
 var testEnd = function () {
