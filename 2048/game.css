@@ -1,8 +1,26 @@
 :root {
-  --tile-size: 3rem;
-  --border-size: 3pt;
-  --tile-font: 2rem;
+   --tile-size: 3rem;
+   --border-size: 3pt;
+   --tile-font: 2rem;
+   --board-size: 4;
+}
+#board {
+   display: inline-grid;
+   grid-template-columns: auto;
+   grid-template-rows: var(--tile-size) var(--tile-size) var(--tile-size) var(--tile-size);
+   grid-template-areas:
+      "r1c1  r1c2  r1c3  r1c4"
+      "r2c1  r2c2  r2c3  r2c4"
+      "r3c1  r3c2  r3c3  r3c4"
+      "r4c1  r4c2  r4c3  r4c4"
+}
+.row {
+   display: inline-grid;
+
 }
 .tile {
-  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
 }
