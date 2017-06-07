@@ -67,6 +67,7 @@ boxes.forEach(function (square) {
             player = (player + 1) % 2;
          }
       }
+      testEnd();
       testWinner();
    };
 });
