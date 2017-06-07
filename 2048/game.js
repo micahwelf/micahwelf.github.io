@@ -5,7 +5,7 @@ var createBoard = function () {
    for (var i = 0; i < 4; i++) {
       var row = document.createElement("div");
       row.classList.add("row");
-      mainBoard.appendChild(row);
+      divBoard.appendChild(row);
 
       for (var j = 0; j < 4; j++) {
          var tile = document.createElement("div");
@@ -16,8 +16,8 @@ var createBoard = function () {
 }
 
 var divCell = function (row,col) {
-   var mainBoard = document.querySelector("#board");
-   var targetRow = mainBoard.children.item((row - 1));
+   var divBoard = document.querySelector("#board");
+   var targetRow = divBoard.children.item((row - 1));
    return targetRow.children.item((col - 1));
 }
 
