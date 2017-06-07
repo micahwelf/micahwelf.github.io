@@ -15,3 +15,15 @@ keymap.cson ==>
   'f2': 'core:close'
   'f4': 'editor:auto-indent-all'
   'f5': 'application:open-file'
+
+
+config.cson ==>
+
+"*":
+  editor:
+    preferredLineLength: 120
+    tabLength: 3
+  "exception-reporting":
+    userId: "30c252be-bf05-1fe3-542a-3f7b10369ed4"
+  welcome:
+    showOnStartup: false
