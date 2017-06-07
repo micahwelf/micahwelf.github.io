@@ -13,6 +13,17 @@ var col2 = document.querySelectorAll(".c2");
 var col3 = document.querySelectorAll(".c3");
 var diag1 = [row1[0], row2[1], row3[2]];
 var diag2 = [row3[0], row2[1], row1[0]];
+var winningSets = [row1, row2, row3, col1, col2, col3, diag1, diag2];
+
+var testWinner = function () {
+   for (var i = 0;  i < winningSets.length;  i++) {
+      null;
+   }
+};
+
+var testEnd = function () {
+   null;
+};
 
 boxes.forEach(function (square) {
    square.onclick = function () {
