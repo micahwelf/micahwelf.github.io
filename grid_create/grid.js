@@ -5,14 +5,14 @@ var playerX = "playerX";
 var playerO = "playerO";
 var boxes = document.querySelectorAll(".square");
 var row_wrap = Math.sqrt(boxes.length);
-var rows = [];
+var rows;
 for (var i = 0; i < boxes.length; i++) {
    if ((i % row_wrap) == 0) {
-      var r = [];
+      var r;
    }
    r[(i%row_wrap)] = boxes[i];
    if (((i + 1) % row_wrap) == 0) {
-      rows[(i / row_wrap)] = r;
+      var rows[(i / row_wrap)] = r;
    }
 }
 boxes.forEach(function (square) {
