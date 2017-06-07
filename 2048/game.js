@@ -19,12 +19,20 @@ var createBoard = function () {
   }
 }
 
+var updateBoard = function() {
+  for (var row = 0; row < 4 ; row++ ) {
+    for (var col = 0 ; col < 4 ; col++) {
+
+    }
+  }
+}
+
 var addTile = function () {
   board["tile1-1"] = 4;
 };
 
 
-creatBoard();
+createBoard();
 
 addTile();
 console.log(board);
