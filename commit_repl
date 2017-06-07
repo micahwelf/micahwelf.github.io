@@ -1,6 +1,7 @@
 #!/bin/zsh
 function {
 	local msg
+	git pull;
 	while true
 	do
 		read 'msg?Commit Message => '

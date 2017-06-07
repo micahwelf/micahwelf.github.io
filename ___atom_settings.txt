@@ -1,0 +1,17 @@
+init.coffee ==>
+
+atom.commands.add 'atom-text-editor', 'editor:auto-indent-all', ->
+    editor = atom.workspace.getActiveTextEditor();
+    oldRanges = editor.getSelectedBufferRanges();
+    editor.selectAll();
+    atom.commands.dispatch(atom.views.getView(editor), 'editor:auto-indent')
+    editor.setSelectedBufferRanges(oldRanges);
+
+
+keymap.cson ==>
+
+'atom-text-editor':
+  'f3': 'core:save'
+  'f2': 'core:close'
+  'f4': 'editor:auto-indent-all'
+  'f5': 'application:open-file'
