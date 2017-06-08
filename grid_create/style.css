@@ -1,6 +1,6 @@
 :root {
   --squareSize: 4rem;
-  --boxborder: 3pt black solid;
+  --boxborder: 0pt black solid;
 }
 section {
   text-align: center;
@@ -9,6 +9,8 @@ section {
   display: inline-grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
+  grid-gap: 3pt;
+  background: black;
   /*grid-template-columns: var(--squareSize) var(--squareSize) var(--squareSize);*/
   /*grid-template-rows: var(--squareSize) var(--squareSize) var(--squareSize);*/
   grid-template-areas:
@@ -54,6 +56,7 @@ section {
   vertical-align: bottom;
   text-align: center;
   font-size: calc(var(--squareSize) - 1rem);
+  background: white;
 }
 
 .square.playerX {
