@@ -25,7 +25,7 @@ var divCell = function (row,col) {
 }
 
 var getKey = function (row,col) {
-   return "tile-" + row.toString + "-" + col.toString;
+   return "tile-" + row + "-" + col;
 }
 
 var virtualCell = function (row,col) {
