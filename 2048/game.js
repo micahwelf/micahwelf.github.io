@@ -42,7 +42,7 @@ var updateBoard = function() {
          if (value) {
             // set innerHTML
             // other things
-            divCell((row + 1), (col + 1)).innerHTML = virtualCell((row + 1), (col + 1));
+            divCell((row + 1), (col + 1)).innerHTML = virtualCell(row, col);
             tileDiv.classList.add("value-" + value);
 
          } else {
