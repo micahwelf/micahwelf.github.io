@@ -4,125 +4,126 @@
 	<meta charset="utf-8">
 	<title>Code School Projects</title>
 	<style>
-		html { height: 100%; }
-		h1, h2, p {
-			margin: 0;
-		}
+	html { height: 100%; }
+	h1, h2, p {
+		margin: 0;
+	}
 
-		body {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-			height: 100%;
-			overflow: hidden;
+		height: 100%;
+		overflow: hidden;
 
-			/*background: rgb(190,240,190);*/
-			background-color: magenta;
-		}
+		/*background: rgb(190,240,190);*/
+		background-color: magenta;
+	}
 
-		.box {
-			background-color: rgb(240, 240, 240);
-			border: 1px solid black;
+	.box {
+		background-color: rgb(240, 240, 240);
+		border: 1px solid black;
 
-			width: 55%;
+		width: 55%;
 
-			margin-bottom: 1rem; /* put it up a bit */
-			padding: .75rem 1rem;
+		margin-bottom: 1rem; /* put it up a bit */
+		padding: .75rem 1rem;
 
-			z-index: 30;
-		}
+		z-index: 30;
+	}
 
-		header {
-			text-align: center;
+	header {
+		text-align: center;
 
-			border-bottom: 1px solid black;
+		border-bottom: 1px solid black;
 
-			padding-bottom: 0.5rem;
-			margin-bottom: 1.5rem;
-		}
+		padding-bottom: 0.5rem;
+		margin-bottom: 1.5rem;
+	}
 
-		header h1 {
-			margin-bottom: .5rem;
-			font-size: 2.2rem;
-		}
+	header h1 {
+		margin-bottom: .5rem;
+		font-size: 2.2rem;
+	}
 
-		h2 {
-			border: 1px solid black;
-			display: inline-block;
-			background-color: rgb(235, 235, 235);
+	h2 {
+		border: 1px solid black;
+		display: inline-block;
+		background-color: rgb(235, 235, 235);
 
-			font-size: 1.4rem;
+		font-size: 1.4rem;
 
-			padding: 0.5rem 0.5rem;
-		}
+		padding: 0.5rem 0.5rem;
+	}
 
-		.menu {
-			position: relative;
-		}
-		.menu * {
-			overflow: visible;
-		}
-		.menu, h2, section {
-			transition: top,height,visibility 0.9s;
-		}
-		.menu > h2+section {
-			position: absolute;
-			height: .01rem;
-			visibility: hidden;
-			overflow-y:hidden;
-			overflow-x: visible;
-			padding: 1rem;
-			top: 0.5rem;
-			left: 0.5rem;
-		}
-		.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
-		.menu > h2 + section:hover, .menu > h2 + section:focus, .menu > h2 + section:active {
-			position: absolute;
-			top: -2rem;
-			left: 1rem;
-			z-index: 5;
-			overflow-y: hidden;
-			overflow-x: visible;
-			min-height: 30vh;
-			min-width: 50vw;
-			visibility: visible;
-		}
-		.menu p, .menu h2 {
+	.menu {
+		position: relative;
+		clear: both;
+	}
+	.menu * {
+		overflow: visible;
+		width: auto;
+	}
+	.menu, h2, section {
+		transition: top,height,visibility 0.9s;
+	}
+	.menu > h2+section {
+		position: absolute;
+		height: .01rem;
+		visibility: hidden;
+		overflow-y:hidden;
+		overflow-x: visible;
+		padding: 1rem;
+		top: 0.5rem;
+		left: 0.5rem;
+	}
+	.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
+	.menu > h2 + section:hover, .menu > h2 + section:focus, .menu > h2 + section:active {
+		position: absolute;
+		top: -2rem;
+		left: 1rem;
+		z-index: 5;
+		overflow-y: hidden;
+		overflow-x: visible;
+		min-height: 30vh;
+		visibility: visible;
+	}
+	.menu p, .menu h2 {
+		display: inline-block;
+		background: rgb(250,250,250);
+	}
 
-			background: rgb(250,250,250);
-		}
+	section {
+		padding-left: .5rem;
+		padding-bottom: .5rem;
+	}
 
-		section {
-			padding-left: .5rem;
-			padding-bottom: .5rem;
-		}
+	section p {
+		padding-bottom: 0.5rem;
+		font-size: 1.4rem;
+	}
 
-		section p {
-			padding-bottom: 0.5rem;
-			font-size: 1.4rem;
-		}
+	section a {
+		text-decoration: none;
+	}
 
-		section a {
-			text-decoration: none;
-		}
+	.frog {
+		position: absolute;
+		background-image: url("http://www.pinkfrogservices.com/wp-content/uploads/2016/12/pinkfrog3d_wavingfinal001-LARGE-CLEAR.png");
+		background-size: contain;
+		min-width: 17.5rem;
+		min-height: 13.125rem;
 
-		.frog {
-			position: absolute;
-			background-image: url("http://www.pinkfrogservices.com/wp-content/uploads/2016/12/pinkfrog3d_wavingfinal001-LARGE-CLEAR.png");
-			background-size: contain;
-			min-width: 17.5rem;
-			min-height: 13.125rem;
+		-moz-transform: scaleY(-1);
+		-o-transform: scaleY(-1);
+		-webkit-transform: scaleY(-1);
+		transform: scaleY(-1);
+		filter: FlipV;
+		-ms-filter: "FlipV";
 
-			-moz-transform: scaleY(-1);
-			-o-transform: scaleY(-1);
-			-webkit-transform: scaleY(-1);
-			transform: scaleY(-1);
-			filter: FlipV;
-			-ms-filter: "FlipV";
-
-			z-index: 0;
-		}
+		z-index: 0;
+	}
 	</style>
 </head>
 <body>
@@ -167,6 +168,42 @@
 
 					</section>
 				</span>
+				<span class="menu">
+					<h2>Week 4</h2>
+					<section>
+
+					</section>
+				</span>
+				<span class="menu">
+					<h2>Week 5</h2>
+					<section>
+
+					</section>
+				</span>
+				<span class="menu">
+					<h2>Week 6</h2>
+					<section>
+
+					</section>
+				</span>
+				<span class="menu">
+					<h2>Week 7</h2>
+					<section>
+
+					</section>
+				</span>
+				<span class="menu">
+					<h2>Week 8</h2>
+					<section>
+
+					</section>
+				</span>
+				<span class="menu">
+					<h2>Week 9</h2>
+					<section>
+
+					</section>
+				</span>
 			</section>
 		</span>
 	</div>
@@ -187,25 +224,25 @@
 	<div class="frog"></div>
 
 	<script>
-		for (let frog of document.getElementsByClassName("frog")) {
-			frog.style.left = `${Math.random() * window.innerWidth}px`;
-			frog.fallPos = -200 - (Math.random() * 100000) / 100;
-			frog.style.top = `${frog.fallPos}px`;
-		}
+	for (let frog of document.getElementsByClassName("frog")) {
+		frog.style.left = `${Math.random() * window.innerWidth}px`;
+		frog.fallPos = -200 - (Math.random() * 100000) / 100;
+		frog.style.top = `${frog.fallPos}px`;
+	}
 
-		window.setTimeout(function() {
-			window.setInterval(function() {
-				for (let frog of document.getElementsByClassName("frog")) {
-					frog.fallPos += 1;
+	window.setTimeout(function() {
+		window.setInterval(function() {
+			for (let frog of document.getElementsByClassName("frog")) {
+				frog.fallPos += 1;
 
-					if (frog.fallPos > window.innerHeight) {
-						frog.fallPos = -300;
-						frog.style.left = `${Math.random() * window.innerWidth}px`;
-					}
-
-					frog.style.top = `${frog.fallPos}px`;
+				if (frog.fallPos > window.innerHeight) {
+					frog.fallPos = -300;
+					frog.style.left = `${Math.random() * window.innerWidth}px`;
 				}
-			}, 5);
-		}, 3000);
+
+				frog.style.top = `${frog.fallPos}px`;
+			}
+		}, 5);
+	}, 3000);
 	</script>
 </body>
