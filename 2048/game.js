@@ -1,9 +1,19 @@
 var virtualBoard = {};
+var score = 0;
 var divBoard = document.querySelector("#board");
+var divScore;
+var divMessage;
 var totCol = 4;
 var totRow = 4;
 
 var createBoard = function () {
+   textScore = document.createTextNode("Score: ");
+   divScore = document.createElement("div");
+   divScore.id = "score";
+   divMessage = document.createElement("div");
+   divMessage.id = "message";
+   divMessage.classList.add("message-to-user");
+   divBoard.appendChild
    for (var r = 0; r < totRow; r++) {
       var row = document.createElement("div");
       row.classList.add("row");
@@ -16,6 +26,10 @@ var createBoard = function () {
          row.appendChild(tile);
       }
    }
+}
+
+var updateScore = function (add) {
+   score += add;
 }
 
 var divCell = function (row,col) {
@@ -76,6 +90,7 @@ var combineNumbers = function (numbers) {
    while (numbers.length > 0) {
       if (numbers[i] === numbers[(i + 1)]) {
          sum = numbers[0] + numbers[1];
+         updateScore(sum);
          newNumbers.push(sum);
          numbers.shift;
          numbers.shift;
@@ -88,6 +103,28 @@ var combineNumbers = function (numbers) {
       newNumbers.push(undefined);
    }
    return newNumbers;
+};
+
+var generateNumber = function () {
+   var emptyTiles = [];
+   // 2 or 4 90% chance of getting a 2;
+   var newNumber = [2,2,2,2,2,2,2,2,2,4];
+   for (var row = 0; row < totRow ; row++ ) {
+      for (var col = 0 ; col < totCol ; col++) {
+         var key = getKey(row,col);
+         var value = virtualBoard[key];
+         if (value === undefined) {
+            emptyTiles.push(key);
+         }
+      }
+   }
+   if (emptyTiles.length > 0) {
+      targetIndex = ((Math.random() * emptyTiles.length) % emptyTiles.length).toFixed(0);
+      targetValue = newNumber[((Math.random() * newNumbers.length) % newNumbers.length).toFixed(0)];
+      virtualBoard[emptyTiles[targetIndex]] = targetValue;
+   } else {
+      divMessage.innerHTML = "Board Full - Game Over";
+   }
 };
 
 var combineLeft = function (row) {
@@ -109,20 +146,20 @@ document.onkeydown = checkKey;
 
 function checkKey(e) {
 
-    e = e || window.event;
+e = e || window.event;
 
-    if (e.keyCode == '38') {
-        // up arrow
-    }
-    else if (e.keyCode == '40') {
-        // down arrow
-    }
-    else if (e.keyCode == '37') {
-       // left arrow
-    }
-    else if (e.keyCode == '39') {
-       // right arrow
-    }
+if (e.keyCode == '38') {
+// up arrow
+}
+else if (e.keyCode == '40') {
+// down arrow
+}
+else if (e.keyCode == '37') {
+// left arrow
+}
+else if (e.keyCode == '39') {
+// right arrow
+}
 
 }
 
