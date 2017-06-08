@@ -83,23 +83,26 @@
 		top: -2rem;
 		left: 1rem;
 		z-index: 5;
-		overflow-y: hidden;
+		overflow-y: visible;
 		overflow-x: visible;
 		min-height: auto;
 		visibility: visible;
 	}
 	.menu p, .menu h2 {
-		display: inline-block;
+		display: flex;
+		flex-direction: row;
 		background: rgba(100,100,100, 0.9);
 	}
 
 	.menu section {
-		display: block;
+		display: flex;
+		flex-direction: column;
 		padding-left: .5rem;
 		padding-bottom: .5rem;
 		background: rgba(100,100,100, 0.3);
 		border: 1pt solid black;
 		min-width: 40vw;
+		min-height: auto;
 	}
 
 	.menu section p {
