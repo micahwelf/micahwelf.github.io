@@ -12,7 +12,7 @@ var createBoard = function () {
       for (var j = 0; j < totCol; j++) {
          var tile = document.createElement("div");
          tile.classList.add("tile");
-         tile.id = getKey(rot,col);
+         tile.id = getKey(row,col);
          row.appendChild(tile);
       }
    }
