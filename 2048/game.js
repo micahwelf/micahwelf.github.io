@@ -4,15 +4,15 @@ var totCol = 4;
 var totRow = 4;
 
 var createBoard = function () {
-   for (var i = 0; i < totRow; i++) {
+   for (var r = 0; r < totRow; r++) {
       var row = document.createElement("div");
       row.classList.add("row");
       divBoard.appendChild(row);
 
-      for (var j = 0; j < totCol; j++) {
+      for (var c = 0; c < totCol; c++) {
          var tile = document.createElement("div");
          tile.classList.add("tile");
-         tile.id = getKey(row,col);
+         tile.id = getKey(r,c);
          row.appendChild(tile);
       }
    }
