@@ -1,7 +1,7 @@
 :root {
    --tile-size: 3rem;
    --border-size: 3pt;
-   --tile-font: 2rem;
+   --tile-font: 2rem sans-serif;
    --board-size: 4;
    --grid-spacing: 0.25rem;
 }
@@ -11,10 +11,11 @@
    grid-template-columns: auto;
    grid-template-rows: auto auto auto auto;
    grid-template-areas:
-      "r1"
-      "r2"
-      "r3"
-      "r4"
+   "r1"
+   "r2"
+   "r3"
+   "r4";
+   border-radius: 3pt;
 }
 .row {
    display: inline-grid;
@@ -22,11 +23,14 @@
    grid-template-columns: var(--tile-size) var(--tile-size) var(--tile-size) var(--tile-size);
    grid-template-rows: var(--tile-size);
    grid-template-areas:
-      "c1  c2  c3  c4"
+   "c1  c2  c3  c4";
 }
 .tile {
    display: flex;
    justify-content: center;
    align-items: center;
    align-content: center;
+   font: var(--tile-font);
+   border: solid black 1pt;
+   border-radius: 2pt;
 }
