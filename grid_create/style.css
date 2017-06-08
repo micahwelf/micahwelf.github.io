@@ -50,11 +50,12 @@ section {
   border-left: var(--boxborder);
 }
 .square {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: var(--squareSize);
   height: var(--squareSize);
-  vertical-align: bottom;
-  text-align: center;
   font-size: calc(var(--squareSize) - 1rem);
   background: white;
 }
