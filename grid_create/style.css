@@ -18,6 +18,14 @@ section {
   width: auto;
   height: auto;
 }
+#result {
+   margin: 2rem;
+   border: 1pt black solid;
+   padding: 1rem;
+   font-size: 3rem;
+   color: darkblue;
+   font-weight: bold;
+}
 .r1 {
   border-bottom: var(--boxborder);
 }

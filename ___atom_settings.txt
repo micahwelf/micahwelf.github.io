@@ -27,3 +27,11 @@ config.cson ==>
     userId: "30c252be-bf05-1fe3-542a-3f7b10369ed4"
   welcome:
     showOnStartup: false
+
+
+style.less ==>
+
+// Hack to hide errors !!
+atom-notification.error {
+display: none;
+}
