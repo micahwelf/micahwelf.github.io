@@ -73,7 +73,6 @@
 		position: absolute;
 		height: .01rem;
 		visibility: hidden;
-		overflow-y:hidden;
 		overflow-x: visible;
 		padding: 1rem;
 		top: 0.5rem;
@@ -87,13 +86,15 @@
 		z-index: 5;
 		overflow-y: visible;
 		overflow-x: visible;
-		min-height: auto;
+		min-height: 4rem;
+		max-height: 100vh;
 		visibility: visible;
 	}
 	.menu p, .menu h2 {
 		display: flex;
 		flex-direction: row;
 		background: rgba(100,100,100, 0.9);
+		height: 2rem;
 	}
 
 	.menu section {
