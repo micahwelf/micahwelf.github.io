@@ -233,4 +233,4 @@ assignValue(1,1,2);
 
 updateBoard();
 console.log(virtualBoard);
-console.log(divBoard);
+console.log(divGame);
