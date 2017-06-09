@@ -35,7 +35,7 @@ var createBoard = function () {
       for (var c = 0; c < totCol; c++) {
          var tile = document.createElement("div");
          tile.classList.add("tile");
-         tile.id = getKey(r,c);
+         tile.id = toKey(r,c);
          row.appendChild(tile);
       }
    }
@@ -100,18 +100,18 @@ var divCell = function (row,col) {
    return targetRow.children.item((col - 1));
 }
 
-var getKey = function (row,col) {
+var toKey = function (row,col) {
    return "tile-" + row + "-" + col;
 }
 
 var virtualCell = function (row,col) {
-   return virtualBoard[getKey(row,col)]
+   return virtualBoard[toKey(row,col)]
 }
 
 var updateBoard = function() {
    for (var row = 0; row < totRow ; row++ ) {
       for (var col = 0 ; col < totCol ; col++) {
-         var key = getKey(row,col);
+         var key = toKey(row,col);
          var value = virtualBoard[key];
          var tileDiv = document.querySelector("#" + key);
          tileDiv.className = "tile";
@@ -131,8 +131,19 @@ var updateBoard = function() {
 
 var getRowNumbers = function(row) {
    var numbers = [];
-   for (var col  = 0 ; col < 4 ; col ++ ) {
-      var key = tileKey(col, row);
+   for (var col  = 0 ; col < totCol ; col ++ ) {
+      var key = toKey(col, row);
+      var value = board[key];
+      if (value) {
+         numbers.push(value);
+      }
+   }
+};
+
+var getColNumbers = function(col) {
+   var numbers = [];
+   for (var row  = 0 ; row < totRow ; row ++ ) {
+      var key = toKey(col, row);
       var value = board[key];
       if (value) {
          numbers.push(value);
@@ -141,24 +152,49 @@ var getRowNumbers = function(row) {
 };
 
 var setRowNumbers = function(row, numbers) {
-   for (var col  = 0 ; col < 4 ; col ++ ) {
-      var key = tileKey(col, row);
+   for (var col  = 0 ; col < totCol ; col ++ ) {
+      var key = toKey(col, row);
       virtualBoard[key] = numbers[col];
    }
 };
 
-var combineNumbers = function (numbers) {
+var setColNumbers = function(row, numbers) {
+   for (var col  = 0 ; col < totCol ; col ++ ) {
+      var key = toKey(col, row);
+      virtualBoard[key] = numbers[col];
+   }
+};
+
+//  direction ::=   "forward" | "backward"
+var combineNumbers = function (direction, numbers) {
    var newNumbers = [];
-   while (numbers.length > 0) {
-      if (numbers[i] === numbers[(i + 1)]) {
-         sum = numbers[0] + numbers[1];
-         updateScore(sum);
-         newNumbers.push(sum);
-         numbers.shift;
-         numbers.shift;
-      } else {
-         newNumbers.push(numbers[0]);
-         numbers.shift;
+   if (direction === "forward") {
+      while (numbers.length > 0) {
+         if (numbers[0] === numbers[1]) {
+            sum = numbers[0] + numbers[1];
+            updateScore(sum);
+            newNumbers.push(sum);
+            numbers.shift;
+            numbers.shift;
+         } else {
+            newNumbers.push(numbers[0]);
+            numbers.shift;
+         }
+      }
+   }
+   if (direction === "backward") {
+      while (numbers.length > 0) {
+         var last = numbers.length;
+         if (numbers[(last - 1)] === numbers[(last - 2)]) {
+            sum = numbers[(last - 1)] + numbers[(last - 2)];
+            updateScore(sum);
+            newNumbers.unshift(sum);
+            numbers.pop;
+            numbers.pop;
+         } else {
+            newNumbers.unshift(numbers[last]);
+            numbers.pop;
+         }
       }
    }
    while (newNumbers,length < 4) {
@@ -173,7 +209,7 @@ var generateRandomTile = function () {
    var newNumber = [2,2,2,2,2,2,2,2,2,4];
    for (var row = 0; row < totRow ; row++ ) {
       for (var col = 0 ; col < totCol ; col++) {
-         var key = getKey(row,col);
+         var key = toKey(row,col);
          var value = virtualBoard[key];
          if (value === undefined) {
             emptyTiles.push([row, col]);
@@ -196,8 +232,29 @@ var combineLeft = function (row) {
    updateBoard();
 };
 
+var combineRight = function (row) {
+   var oldNumbers = getRowNumbers(row);
+   var newNumbers = combineNumbers(oldNumbers);
+   setRowNumbers(row, newNumbers);
+   updateBoard();
+};
+
+var combineUp = function (row) {
+   var oldNumbers = getRowNumbers(row);
+   var newNumbers = combineNumbers(oldNumbers);
+   setRowNumbers(row, newNumbers);
+   updateBoard();
+};
+
+var combineDown = function (row) {
+   var oldNumbers = getRowNumbers(row);
+   var newNumbers = combineNumbers(oldNumbers);
+   setRowNumbers(row, newNumbers);
+   updateBoard();
+};
+
 var assignValue = function (row, col, value) {
-   virtualBoard[getKey(row,col)] = value;
+   virtualBoard[toKey(row,col)] = value;
 };
 
 
