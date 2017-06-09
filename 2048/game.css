@@ -5,7 +5,7 @@
    --board-size: 4;
    --grid-spacing: 0.25rem;
 }
-#board {
+#game-board {
    display: inline-grid;
    grid-gap: var(--grid-spacing);
    grid-template-columns: auto;
