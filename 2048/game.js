@@ -16,7 +16,10 @@ var createBoard = function () {
    var divMessage = document.createElement("div");
    divMessage.id = "game-message";
    divMessage.classList.add("message-to-user");
+   var divSubmit = document.createElement("button");
+   divSubmit.id = "submit-score";
    divGame.appendChild(divScore);
+   divGame.appendChild(divSubmit);
    divGame.appendChild(divMessage);
    divGame.appendChild(divScoreBoard);
    divGame.appendChild(divBoard);
