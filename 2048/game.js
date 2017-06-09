@@ -11,6 +11,8 @@ var createBoard = function () {
    divBoard.id = "game-board";
    var divScore = document.createElement("div");
    divScore.id = "game-score";
+   var divScoreLabel = document.createElement("div");
+   divScore.id = "game-score-label";
    var divScoreBoard = document.createElement("div");
    divScoreBoard.id = "game-score-board";
    var divMessage = document.createElement("div");
@@ -18,6 +20,8 @@ var createBoard = function () {
    divMessage.classList.add("message-to-user");
    var divSubmit = document.createElement("button");
    divSubmit.id = "submit-score";
+   divScoreLabel.innerHTML = "Your Score: ";
+   divGame.appendChild(divScoreLabel);
    divGame.appendChild(divScore);
    divGame.appendChild(divSubmit);
    divGame.appendChild(divMessage);
@@ -49,6 +53,20 @@ var toScore = function (name, score) {
    return newscore;
 };
 
+var getHighScores = function () {
+   fetch(
+      "https://highscoreapi.herokuapp.com/scores"
+   ).then(
+      function (response) {
+         console.log("Scores recieved. Status: ", response.status)
+      }
+   ).then(
+      function (body) {
+         console.log("Body Recieved: ", body);
+      }
+   );
+};
+
 var saveScore = function () {
    var name = prompt("Please enter your name: ");
    fetch(
@@ -63,9 +81,11 @@ var saveScore = function () {
             "score": score
          })
       }
-   ).then(function (response) {
-      console.log("save score returned Status", response.status);
-   });
+   ).then(
+      function (response) {
+         console.log("save score returned Status", response.status);
+      }
+   );
 
    var r = new XMLHttpRequest();
 };
