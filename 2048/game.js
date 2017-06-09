@@ -167,7 +167,7 @@ var combineNumbers = function (numbers) {
    return newNumbers;
 };
 
-var generateNumber = function () {
+var generateRandomTile = function () {
    var emptyTiles = [];
    // 2 or 4 90% chance of getting a 2;
    var newNumber = [2,2,2,2,2,2,2,2,2,4];
@@ -176,7 +176,7 @@ var generateNumber = function () {
          var key = getKey(row,col);
          var value = virtualBoard[key];
          if (value === undefined) {
-            emptyTiles.push(key);
+            emptyTiles.push([row, col]);
          }
       }
    }
@@ -228,9 +228,10 @@ else if (e.keyCode == '39') {
 */
 
 createBoard();
-
-assignValue(1,1,2);
-
+// assignValue(1,1,2);
+generateRandomTile();
+generateRandomTile();
 updateBoard();
+
 console.log(virtualBoard);
 console.log(divGame);
