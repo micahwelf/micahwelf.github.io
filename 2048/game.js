@@ -42,7 +42,28 @@ var toScore = function (name, score) {
 };
 
 var saveScore = function () {
-   var post = new XMLHttpRequest();
+   var name = prompt("Please enter your name: ");
+   fetch(
+      "https://highscoreapi.herokuapp.com/scores",
+      {
+         "method": "POST",
+         "headers": new Headers({
+            "Content-Type": "application/json"
+         }),
+         "body": JSON.stringify({
+            "name": name,
+            "score": score
+         })
+      }
+   ).then(function (response) {
+      console.log("save score returned Status", response.status);
+   });
+
+   var r = new XMLHttpRequest();
+};
+
+document.querySelector("#submit-score").onclick = function () {
+   saveScore();
 };
 
 var updateScore = function (add) {
@@ -50,7 +71,7 @@ var updateScore = function (add) {
 }
 
 var divCell = function (row,col) {
-   var divBoard = document.querySelector("#board");
+   var divBoard = document.querySelector("#game-board");
    var targetRow = divBoard.children.item((row - 1));
    return targetRow.children.item((col - 1));
 }
