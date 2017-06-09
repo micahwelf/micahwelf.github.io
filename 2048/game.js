@@ -35,6 +35,11 @@ var createBoard = function () {
          row.appendChild(tile);
       }
    }
+
+   document.querySelector("#submit-score").onclick = function () {
+      saveScore();
+   };
+
 }
 
 var toScore = function (name, score) {
@@ -63,10 +68,6 @@ var saveScore = function () {
    });
 
    var r = new XMLHttpRequest();
-};
-
-document.querySelector("#submit-score").onclick = function () {
-   saveScore();
 };
 
 var updateScore = function (add) {
