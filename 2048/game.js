@@ -1,17 +1,16 @@
 var virtualBoard = {};
-var highScores = {};
+var highScores = [];
 var score = 0;
 var divGame = document.querySelector("#game-2048");
 var totCol = 4;
 var totRow = 4;
 
 var createBoard = function () {
+   divGame.innerHTML = "";
    var divBoard = document.createElement("div");
    divBoard.id = "game-board";
-   divGame.innerHTML = "";
    var divScore = document.createElement("div");
    divScore.id = "game-score";
-   divBoard.appendChild()
    var divScoreBoard = document.createElement("div");
    divScoreBoard.id = "game-score-board";
    var divMessage = document.createElement("div");
@@ -34,6 +33,17 @@ var createBoard = function () {
       }
    }
 }
+
+var toScore = function (name, score) {
+   var newscore = {};
+   newscore["name"] = name;
+   newscore["score"] = score;
+   return newscore;
+};
+
+var saveScore = function () {
+   var post = new XMLHttpRequest();
+};
 
 var updateScore = function (add) {
    score += add;
