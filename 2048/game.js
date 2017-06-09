@@ -1,19 +1,26 @@
 var virtualBoard = {};
+var highScores = {};
 var score = 0;
-var divBoard = document.querySelector("#board");
-var divScore;
-var divMessage;
+var divGame = document.querySelector("#game-2048");
 var totCol = 4;
 var totRow = 4;
 
 var createBoard = function () {
-   textScore = document.createTextNode("Score: ");
-   divScore = document.createElement("div");
-   divScore.id = "score";
-   divMessage = document.createElement("div");
-   divMessage.id = "message";
+   var divBoard = document.createElement("div");
+   divBoard.id = "game-board";
+   divGame.innerHTML = "";
+   var divScore = document.createElement("div");
+   divScore.id = "game-score";
+   divBoard.appendChild()
+   var divScoreBoard = document.createElement("div");
+   divScoreBoard.id = "game-score-board";
+   var divMessage = document.createElement("div");
+   divMessage.id = "game-message";
    divMessage.classList.add("message-to-user");
-   divBoard.appendChild
+   divGame.appendChild(divScore);
+   divGame.appendChild(divMessage);
+   divGame.appendChild(divScoreBoard);
+   divGame.appendChild(divBoard);
    for (var r = 0; r < totRow; r++) {
       var row = document.createElement("div");
       row.classList.add("row");
