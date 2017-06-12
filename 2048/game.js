@@ -156,7 +156,7 @@ var updateBoard = function () {
 var getRowNumbers = function (row) {
    var numbers = [];
    for (var col = 0; col < totCol; col++) {
-      var key = toKey(col, row);
+      var key = toKey(row, col);
       var value = virtualBoard[key];
       if (value) {
          numbers.push(value);
@@ -168,7 +168,7 @@ var getRowNumbers = function (row) {
 var getColNumbers = function (col) {
    var numbers = [];
    for (var row = 0; row < totRow; row++) {
-      var key = toKey(col, row);
+      var key = toKey(row, col);
       var value = virtualBoard[key];
       if (value) {
          numbers.push(value);
@@ -179,14 +179,14 @@ var getColNumbers = function (col) {
 
 var setRowNumbers = function (row, numbers) {
    for (var col = 0; col < totCol; col++) {
-      var key = toKey(col, row);
+      var key = toKey(row, col);
       virtualBoard[key] = numbers[col];
    }
 };
 
 var setColNumbers = function (col, numbers) {
    for (var row = 0; row < totRow; row++) {
-      var key = toKey(col, row);
+      var key = toKey(row, col);
       virtualBoard[key] = numbers[row];
    }
 };
