@@ -37,6 +37,7 @@ var createBoard = function () {
          tile.classList.add("tile");
          tile.id = toKey(r, c);
          row.appendChild(tile);
+         virtualBoard[toKey(r, c)] = undefined;
       }
    }
 
@@ -229,7 +230,6 @@ var generateRandomTile = function () {
 
 var newGame = function () {
    score = 0;
-   virtualBoard = {};
    createBoard();
    generateRandomTile();
    generateRandomTile();
