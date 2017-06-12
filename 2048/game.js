@@ -2,24 +2,37 @@ var virtualBoard = {};
 var highScores = [];
 var score = 0;
 var divGame = document.querySelector("#game-2048");
+var divBoard;
+var divScore;
+var divScoreBoard;
+var divScoreLabel;
+var divMessage;
+var divSubmit;
 var totCol = 4;
 var totRow = 4;
 
 var createBoard = function () {
    divGame.innerHTML = "";
-   var divBoard = document.createElement("div");
+   
+   divBoard = document.createElement("div");
    divBoard.id = "game-board";
-   var divScore = document.createElement("div");
+
+   divScore = document.createElement("div");
    divScore.id = "game-score";
-   var divScoreLabel = document.createElement("div");
+
+   divScoreLabel = document.createElement("div");
    divScore.id = "game-score-label";
-   var divScoreBoard = document.createElement("div");
+
+   divScoreBoard = document.createElement("div");
    divScoreBoard.id = "game-score-board";
-   var divMessage = document.createElement("div");
+
+   divMessage = document.createElement("div");
    divMessage.id = "game-message";
    divMessage.classList.add("message-to-user");
-   var divSubmit = document.createElement("button");
+
+   divSubmit = document.createElement("button");
    divSubmit.id = "submit-score";
+
    divScoreLabel.innerHTML = "Your Score: ";
    divGame.appendChild(divScoreLabel);
    divGame.appendChild(divScore);
@@ -314,11 +327,10 @@ else if (e.keyCode == '39') {
 
 */
 
-createBoard();
-// assignValue(1,1,2);
-generateRandomTile();
-generateRandomTile();
-updateBoard();
+document.onkeydown = function (event) {
+   if (event.)
+};
 
+newGame();
 console.log(virtualBoard);
 console.log(divGame);
