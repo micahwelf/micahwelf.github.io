@@ -15,9 +15,9 @@
    "r2"
    "r3"
    "r4";
-   border-radius: calc( var(--grid-spacing) / 4 );
+   border-radius: calc( var(--grid-spacing) / 1.5 );
    padding: var(--grid-spacing);
-   background: blue;
+   background: lightblue;
 }
 .row {
    display: inline-grid;
@@ -34,5 +34,5 @@
    align-content: center;
    font: var(--tile-font);
    border: solid black 1pt;
-   border-radius: calc( var(-grid-spacing) / 4);
+   border-radius: calc( var(-grid-spacing) / 1.5);
 }
