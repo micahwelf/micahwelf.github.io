@@ -259,9 +259,9 @@ var combineRight = function (row) {
 
 var combineUp = function () {
    for (var col = 0; col < totCol; col++) {
-      var oldNumbers = getRowNumbers(row);
+      var oldNumbers = getColNumbers(col);
       var newNumbers = combineNumbers(oldNumbers);
-      setRowNumbers(row, newNumbers);
+      setColNumbers(col, newNumbers);
    }
    updateBoard();
 };
