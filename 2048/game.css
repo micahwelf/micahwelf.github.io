@@ -34,5 +34,5 @@
    align-content: center;
    font: var(--tile-font);
    border: solid black 1pt;
-   border-radius: calc( var(-grid-spacing) / 1.5);
+   border-radius: calc( var(--grid-spacing) / 1.5 );
 }
