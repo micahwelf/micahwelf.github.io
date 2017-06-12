@@ -230,6 +230,9 @@ var generateRandomTile = function () {
 var newGame = function () {
    score = 0;
    virtualBoard = {};
+   createBoard();
+   generateRandomTile();
+   generateRandomTile();
    updateBoard();
 
 };
