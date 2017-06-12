@@ -13,7 +13,7 @@ var totRow = 4;
 
 var createBoard = function () {
    divGame.innerHTML = "";
-   
+
    divBoard = document.createElement("div");
    divBoard.id = "game-board";
 
@@ -328,7 +328,19 @@ else if (e.keyCode == '39') {
 */
 
 document.onkeydown = function (event) {
-   if (event.)
+   if (event.which == 37) {
+      combineLeft();
+      console.log("down key pressed");
+   } else if (event.which == 38) {
+      combineUp();
+      console.log("up key pressed");
+   } else if (event.which == 39) {
+      combineRight();
+      console.log("right key pressed");
+   } else if (event.which == 40) {
+      combineDown();
+      console.log("left key pressed");
+   }
 };
 
 newGame();
