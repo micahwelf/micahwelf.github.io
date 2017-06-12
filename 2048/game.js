@@ -229,8 +229,11 @@ var generateRandomTile = function () {
    }
    if (emptyTiles.length > 0) {
       targetIndex = ((Math.random() * emptyTiles.length) % emptyTiles.length).toFixed(0);
+      targetIndexRow = targetIndex[0];
+      targetIndexCol = targetIndex[1];
       targetValue = newNumber[((Math.random() * newNumber.length) % newNumber.length).toFixed(0)];
-      virtualBoard[emptyTiles[targetIndex]] = targetValue;
+
+      virtualBoard[toKey(emptyTiles[targetIndex])] = targetValue;
    } else {
       divMessage.innerHTML = "Board Full - Game Over";
    }
