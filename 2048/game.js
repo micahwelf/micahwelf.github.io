@@ -217,10 +217,11 @@ var generateRandomTile = function () {
          }
       }
    }
-   if (emptyTiles.length > 0) {
-      for (var targetIndex; (targetIndex < emptyTiles.length && targetIndex >= 0); console.log(targetIndex)) {
-         targetIndex = ((Math.random() * emptyTiles.length) % emptyTiles.length).toFixed(0);
-      }
+   var max = emptyTiles.length;
+   if (max > 0) {
+      //for (var targetIndex; (targetIndex < emptyTiles.length && targetIndex >= 0); console.log(targetIndex)) {
+      targetIndex = (Math.random() * max).toFixed(0) % max;
+      //}
       var targetRow = (emptyTiles[targetIndex])[0];
       var targetCol = (emptyTiles[targetIndex])[1];
       var targetValue = newNumber[((Math.random() * newNumber.length) % newNumber.length).toFixed(0)];
