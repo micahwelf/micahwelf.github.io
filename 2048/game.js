@@ -143,7 +143,7 @@ var getRowNumbers = function (row) {
    var numbers = [];
    for (var col = 0; col < totCol; col++) {
       var key = toKey(col, row);
-      var value = board[key];
+      var value = virtualBoard[key];
       if (value) {
          numbers.push(value);
       }
@@ -155,7 +155,7 @@ var getColNumbers = function (col) {
    var numbers = [];
    for (var row = 0; row < totRow; row++) {
       var key = toKey(col, row);
-      var value = board[key];
+      var value = virtualBoard[key];
       if (value) {
          numbers.push(value);
       }
