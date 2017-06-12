@@ -218,7 +218,7 @@ var generateRandomTile = function () {
       }
    }
    if (emptyTiles.length > 0) {
-      for (var targetIndex; targetIndex < (totRow * totCol) && targetIndex >= 0; console.log(targetIndex)) {
+      for (var targetIndex; (targetIndex < emptyTiles.length && targetIndex >= 0); console.log(targetIndex)) {
          targetIndex = ((Math.random() * emptyTiles.length) % emptyTiles.length).toFixed(0);
       }
       var targetRow = (emptyTiles[targetIndex])[0];
