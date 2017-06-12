@@ -261,6 +261,7 @@ var combineLeft = function (row) {
       var newNumbers = combineNumbers(oldNumbers);
       setRowNumbers(row, newNumbers);
    }
+   generateRandomTile();
    updateBoard();
 };
 
@@ -272,6 +273,7 @@ var combineRight = function (row) {
       newNumbers.reverse();
       setRowNumbers(row, newNumbers);
    }
+   generateRandomTile();
    updateBoard();
 };
 
@@ -281,6 +283,7 @@ var combineUp = function () {
       var newNumbers = combineNumbers(oldNumbers);
       setColNumbers(col, newNumbers);
    }
+   generateRandomTile();
    updateBoard();
 };
 
@@ -292,6 +295,7 @@ var combineDown = function () {
       newNumbers.reverse();
       setColNumbers(col, newNumbers);
    }
+   generateRandomTile();
    updateBoard();
 };
 
