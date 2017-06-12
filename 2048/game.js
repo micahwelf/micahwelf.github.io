@@ -120,8 +120,8 @@ var updateScore = function (add) {
 
 var divCell = function (row, col) {
    var divBoard = document.querySelector("#game-board");
-   var targetRow = divBoard.children.item((row - 1));
-   return targetRow.children.item((col - 1));
+   var targetRow = divBoard.children.item(row);
+   return targetRow.children.item(col);
 }
 
 var toKey = function (row, col) {
@@ -142,12 +142,12 @@ var updateBoard = function () {
          if (value) {
             // set innerHTML
             // other things
-            divCell((row + 1), (col + 1)).innerHTML = virtualCell(row, col);
+            tileDiv.innerHTML = virtualCell(row, col);
             tileDiv.classList.add("value-" + value);
 
          } else {
             // handle NULL value;
-            divCell((row + 1), (col + 1)).innerHTML = "";
+            tileDiv.innerHTML = "";
          }
       }
    }
@@ -211,7 +211,7 @@ var combineNumbers = function (numbers) {
          numbers.shift;
       }
    }
-   while (newNumbers, length < max) {
+   while (newNumbers.length < max) {
       newNumbers.push(undefined);
    }
    return newNumbers;
