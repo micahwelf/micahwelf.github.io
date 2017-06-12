@@ -228,10 +228,10 @@ var generateRandomTile = function () {
       }
    }
    if (emptyTiles.length > 0) {
-      targetIndex = ((Math.random() * emptyTiles.length) % emptyTiles.length).toFixed(0);
-      var targetRow = emptyTiles[targetIndex][0];
-      var targetCol = emptyTiles[targetIndex][1];
-      targetValue = newNumber[((Math.random() * newNumber.length) % newNumber.length).toFixed(0)];
+      var targetIndex = ((Math.random() * emptyTiles.length) % emptyTiles.length).toFixed(0);
+      var targetRow = (emptyTiles[targetIndex])[0];
+      var targetCol = (emptyTiles[targetIndex])[1];
+      var targetValue = newNumber[((Math.random() * newNumber.length) % newNumber.length).toFixed(0)];
       virtualBoard[toKey(targetRow,targetCol)] = targetValue;
    } else {
       divMessage.innerHTML = "Board Full - Game Over";
