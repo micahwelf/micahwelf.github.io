@@ -191,7 +191,6 @@ var setColNumbers = function (col, numbers) {
    }
 };
 
-//  direction ::=   "forward" | "backward"
 var combineNumbers = function (numbers) {
    if (totCol > totRow) {
       var max = totCol;
@@ -204,11 +203,11 @@ var combineNumbers = function (numbers) {
          sum = numbers[0] + numbers[1];
          updateScore(sum);
          newNumbers.push(sum);
-         numbers.shift;
-         numbers.shift;
+         numbers.shift();
+         numbers.shift();
       } else {
          newNumbers.push(numbers[0]);
-         numbers.shift;
+         numbers.shift();
       }
    }
    while (newNumbers.length < max) {
