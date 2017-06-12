@@ -37,6 +37,6 @@
    border-radius: calc( var(--grid-spacing) / 1.5 );
    background: tan;
 }
-.tile.tile-2 {
+.tile.value-2 {
    background: lightgreen;
 }
