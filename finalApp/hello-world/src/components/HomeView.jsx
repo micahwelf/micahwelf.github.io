@@ -7,8 +7,11 @@ import { ITEM_CREATE_REQ } from '../actions';
 import AddBlunder from './AddBlunder';
 import BlunderList from './BlunderList';
 
+import UpdateBlunder from './UpdateBlunder';
+
 const propTypes = {
   items: PropTypes.array.isRequired,
+  dispatch: null,
 };
 
 const defaultProps = {
@@ -20,17 +23,17 @@ class HomeView extends Component {
     currentItem: this.props.items[0],
   }
 
-onItemEdit = () => {
-  const { editItem } = this.state;
-  console.log(editItem.id, editItem.name);
-}
+  onItemEdit = () => {
+    const { editItem } = this.state;
+    console.log(editItem.id, editItem.name);
+  }
 
 
-onItemClick = (event) => {
-  const { items } = this.page;
-  const { value } = event.target;
-  this.setState({ editItem: items[value] });
-}
+  onItemClick = (event) => {
+    const { items } = this.page;
+    const { value } = event.target;
+    this.setState({ editItem: items[value] });
+  }
 
   onItemChange = (event) => {
     // const item = event.target.value;
@@ -49,28 +52,34 @@ onItemClick = (event) => {
     this.setState({ currentItem: { name: '' } });
   }
 
-onItemUpdate = () => {
-  const { editItem } = this.state;
-  this.props.dispatch({
-    type: ITEM_UPDATE_REQ,
-    item: editItem,
-  });
-  this.setState({ editItem: { name: '' } });
+  onItemUpdate = () => {
+    const { editItem } = this.state;
+    this.props.dispatch({
+      type: ITEM_UPDATE_REQ,
+      item: editItem,
+    });
+    this.setState({ editItem: null });
+  }
+
+  onItemClick = (event) => {
+    const { items } = ;
+    const { } = 
 }
 
-onItemClick = (event) => {
-  const { items } = ;
-  const {  } = 
-}
 
-onEditItemChange = (event) => {
-  const { id } = this.state.editItem;
-  const editItem = {
-    name: event.target.value,
-    id,
-  };
-  this.setState({ editItem });
-}
+
+  onEditItemChange = (event) => {
+    const { id } = this.state.editItem;
+    const editItem = {
+      name: event.target.value,
+      id,
+    };
+    this.setState({ editItem });
+  }
+
+  onEditItemCheck = (editItem) => {
+    this.onItemUpdate({ ...editItem, completed: true });  
+  }
 
 
   render() {
@@ -79,20 +88,32 @@ onEditItemChange = (event) => {
 
     return (
       <div>
-      <AddBlunder
-      item={currentItem}
-      onChange={this.onItemChange}
-      onClick= {this.onItemCreate}
-      />
-      <BlunderList items={items} />
-      <div className="item-edit">
-        <input 
-          onChange={this.onEditItemChange}
-          value={editItem ? editItem.name: ''}
+        <AddBlunder
+          item={currentItem}
+          onChange={this.onItemChange}
+          onClick={this.onItemCreate}
         />
-        <button onClick={this.onItemCreate}>SaveBlunder</button>
-      </div>
-      // following => Hide
+        <BlunderList
+          items={items}
+          onClick={this.onItemClick}
+          onChange={this.onEditItemCheck}
+        />
+        {editItem ?
+          <UpdateBlunder
+            item={editItem}
+            onChange={this.onEditItemChange}
+            onClick={this.onItemUpdate}
+          /> : null
+        }
+
+        <div className="item-edit">
+          <input
+            onChange={this.onEditItemChange}
+            value={editItem ? editItem.name : ''}
+          />
+          <button onClick={this.onItemCreate}>SaveBlunder</button>
+        </div>
+        // following => Hide
         <div>
           I am home
         <input
@@ -110,13 +131,13 @@ onEditItemChange = (event) => {
         // preceeding => Hide
         </div>
         <div className="item-list">
-        <ul>
-        {items.map((item) => {
-          const { name, id } = itme;
-          return <li key={id}>{name}</li>;
-        })}
-        </ul>
-<ul>    
+          <ul>
+            {items.map((item) => {
+              const { name, id } = itme;
+              return <li key={id}>{name}</li>;
+            })}
+          </ul>
+
 
         </div>
       </div>
