@@ -1,5 +1,6 @@
 import 'whatwg-fetch';
-import receiveStatus from '../receiveStatus';
+import uuidV1 from 'uuid';
+//import receiveStatus from '../receiveStatus';
 
 export default class itemsApi {
   static createItemPromise(item) {
