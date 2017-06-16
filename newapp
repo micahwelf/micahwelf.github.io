@@ -1,0 +1,15 @@
+#!/bin/zsh
+function newapp {
+	
+	local app_name
+	read app_name?'Name for new app directory?'
+	print creating new app named $app_name...
+	create-react-app $app_name
+	cd $app_name
+	yarn add react-tap-event-plugin react-redux react-router@3.0.5 redux react-router-redux redux-saga redux-freeze eslint-config-airbnb prop-types whatwg-fetch
+	atom $PWD &
+	yarn start
+
+}
+
+newapp $@

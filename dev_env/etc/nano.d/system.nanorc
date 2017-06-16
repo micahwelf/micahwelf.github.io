@@ -1,0 +1,36 @@
+#/etc/nanorc
+
+
+###
+## System Files  /etc/fstab
+syntax "fstab" "^fstab"
+header "^#/etc/fstab|^#.*fstab"
+
+## Comments
+ icolor cyan "^[[:space:]]*#.*$"
+ color green "[[:space:]]/((dev|mnt|var|boot|(boot/)?(efi|EFI|uefi|UEFI)|usr|linux|srv|run|sys|etc|opt|root|home|proc)(/[a-zA-Z0-9.:_-]+)*)?"
+ 
+## Entries last-field-first
+ ## optional dump-num & fsck-order-num
+ # color brightblue "([[:space:]]+[0-9])+[[:space:]]*$"
+ icolor brightblue "^[[:space:]]*[^[:space:]#]([^[:space:]]|\\ )*[[:space:]]+(none|/([^[:space:]]|\\ )*)[[:space:]]+([a-zA-Z0-9._-])+[[:space:]]+([^[:space:]]|\\ )+([[:space:]]+[0-9])*"
+ ## mount options
+ color yellow "^[[:space:]]*[^[:space:]#]([^[:space:]]|\\ )*[[:space:]]+(none|/([^[:space:]]|\\ )*)[[:space:]]+([a-zA-Z0-9._-])+[[:space:]]+([^[:space:]]|\\ )+"
+ ## filesystem type
+ color brightyellow "^[[:space:]]*[^[:space:]#]([^[:space:]]|\\ )*[[:space:]]+(none|/([^[:space:]]|\\ )*)[[:space:]]+([a-zA-Z0-9._-])+"
+ ## mount point (path)
+ color brightgreen "^[[:space:]]*[^[:space:]#]([^[:space:]]|\\ )*[[:space:]]+(none|/([^[:space:]]|\\ )*)"
+ ## mount device/pseudo-name
+ color red "(UUID|LABEL|PARTUUID|PARTLABEL)="
+ color brightmagenta "^[[:space:]]*[^[:space:]#]([^[:space:]]|\\ )*"
+ color brightred "^[[:space:]]*[^[:space:]#/]([^[:space:]=:/])*(=|:)"
+ ## keywords/options to be mindful of
+ color green "\<(subvol|subvolid|compress|compress-force|x-gvfs-name)=[^[:space:],]+"
+
+
+
+###
+## System Files  /etc/passwd
+syntax "passwd" "^passwd"
+#header "^#"
+

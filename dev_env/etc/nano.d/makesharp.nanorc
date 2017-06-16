@@ -1,0 +1,23 @@
+
+set autoindent
+set boldtext
+set brackets ""')>]}"
+set mouse
+set multibuffer
+set nowrap
+set punct "!.?"
+set quiet
+set regexp
+set smarthome
+set smooth
+set softwrap
+set tabsize 3
+unset tabstospaces
+set tempfile
+set whitespace ",."
+
+include "/etc/nano.d/nanorc.nanorc"
+include "/etc/nano.d/bash.nanorc"
+include "/etc/nano.d/zsh.nanorc"
+include "/etc/nano.d/gawk.nanorc"
+include "/etc/nano.d/system.nanorc"

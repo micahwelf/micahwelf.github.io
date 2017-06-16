@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+apm install busy-signal editorconfig intentions linter linter-eslint linter-ui-default react

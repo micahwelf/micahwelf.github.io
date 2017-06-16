@@ -1,0 +1,41 @@
+###
+## ZSH scripts (ORIGINAL)  ==> Ada (TARGET) (in development)
+#
+syntax "\.spar$"
+header "^#![^[:space:]]*/bin/spar\>"
+formatter gnatpp -nM --separate-loop-then -rnb
+comment "--"
+#|alias|((\(\((\((\((\((\((\((\((\((\([^()]*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)\)[[:space:]]*|\[\[(\[(\[(\[(\[(\[(\[(\[(\[[^][]*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]\][[:space:]]*))
+
+color black,white
+
+color brightblue "^[[:space:]]*(([[:space:]]*\<(procedure|function|package)\>[[:space:]]*)*[A-Z][a-z_A-Z]*)"
+
+#hack_for_temporary:
+
+color brightyellow "[0-9](.[0-9])?"
+#  IDENTIFIER
+color blue "\<[A-Z][A-Z_a-z.0-9]*\>"
+#  VARIABLE DEFINITION OR ASSIGNMENT
+color brightblue "(\<[A-Z][a-z_A-Z.0-9]*)[[:space:]]*([:]|[:][=]|[=][>])"
+#  VARIABLE OR ENUMERATION ASSOCIATION
+color brightmagenta "(\<[A-Z][a-z_A-Z.0-9]*)[[:space:]]*([=][>])"
+#  USE TYPE
+color magenta "[:]([[:space:]]*)(\<[A-Z][a-zA-Z_0-9]*)" "\<return\>[[:space:]]+([A-Z][A-Z_a-z.0-9]*)[[:space:]]*(\<is\>)"
+color magenta "^([[:space:]]*)(function)([[:space:]]*)([A-Z][A-Z_a-z0-9]*)([[:space:]]*)([(][^)]*[)])?([[:space:]]*)\<return\>[[:space:]]+([A-Z][A-Z_a-z.0-9]*)"
+#color magenta "return"
+#  ADA RESERVED WORDS
+color green "\<[a-z]+\>"
+color green "\<(procedure|function|package|body|type|end|loop|for|while|case|when|exception|if|then|elsif|else|is)\>"
+#  OPERATORS
+color brightgreen  "[/*&<=>'+-]"  "[.][.]"  "\<(mod|rem|not|and|or|and[[:space:]]+then|or[[:space:]]+else)\>" "['][A-Z][A-Z_a-z]*"
+color green "([][{}()]|[:][=]|[=][>]|[:=;,])"
+#  STRING AND CHARACTER
+color brightyellow  ""[^"]*""  "'.'"  """
+#  COMMENT / HIDDEN CODE
+color brightcyan "(^[[:space:]]*--.*$)"  "(--([^"]*|([^"]*["][^"]*["][^"]*)*)$)"
+#  TRAILING SPACE
+color ,green "[[:space:]]+$"
+#  MEANINGFUL SPACE
+color brightwhite, "^[[:space:]]+"
+

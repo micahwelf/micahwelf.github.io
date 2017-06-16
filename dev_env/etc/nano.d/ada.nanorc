@@ -1,0 +1,76 @@
+###
+## Ada
+#
+syntax "ada" "\.adb$" "\.ads$" "\.ada$"
+header "^[[:space:]]*((with|use)\>[[:space:]]+[Aa][Dd][Aa]|package[[:space:]].*|pragma[[:space:]]+Ada_2012)"
+#formatter gnatpp -nM --separate-loop-then -c4 -rnb
+formatter nano_ada_formatter
+comment "--"
+#|alias|((\(\((\((\((\((\((\((\((\((\([^()]*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)|[^()]*)*\)\)[[:space:]]*|\[\[(\[(\[(\[(\[(\[(\[(\[(\[[^][]*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]|[^][]*)*\]\][[:space:]]*))
+
+#  would-be default
+color black,white
+
+#COMMAND word
+icolor brightblue "^[[:space:]]*(([[:space:]]*\<(procedure|function|package)\>[[:space:]]*)*\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*)"
+
+#  NUMBERS
+
+color brightyellow "[0-9](.[0-9])?"
+
+#  IDENTIFIER
+icolor blue "\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*"
+
+#  VARIABLE DEFINITION OR ASSIGNMENT
+icolor brightblue "(\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*)[[:space:]]*([:]|[:][=]|[=][>])"
+
+#  VARIABLE OR ENUMERATION ASSOCIATION
+icolor brightmagenta "(\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*)[[:space:]]*([=][>])"
+
+#  USE TYPE
+icolor magenta "[:]([[:space:]]*)(\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*)" "\<return\>[[:space:]]+(\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*)[[:space:]]*(\<is\>)"
+icolor magenta "^([[:space:]]*)(function)([[:space:]]*)(\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*)([[:space:]]*)([(][^)]*[)])?([[:space:]]*)\<return\>[[:space:]]+(\<[a-z]([_a-z0-9]*[a-z0-9])*(.[a-z]([_a-z0-9]*[a-z0-9])*)*)"
+#  ADA RESERVED WORDS
+#color green "\<[a-z]+\>"
+icolor green "\<(procedure|function|package|body|type|end|loop|for|while|case|when|exception|if|then|elsif|else|is|accept|aliased|access|abstract|abs|abort|all|and|array|at|begin|constant|declare|delay|delta|digits|do|else|elsif|exit|generic|goto|in|interface|limited|mod|new|not|null|of|or|others|out|overriding|pragma|private|protected|raise|range|record|rem|renames|requeue|return|reverse|select|separate|some|subtype|synchronized|tagged|task|terminate|until|use|with|xor)\>"
+#  OPERATORS
+icolor brightgreen  "[/*&<=>'+-]"  "[.][.]"  "\<(mod|rem|not|and|or|and[[:space:]]+then|or[[:space:]]+else|xor|in|out|reverse)\>" "['][A-Z][A-Z_a-z]*"
+color green "([][{}()]|[:][=]|[=][>]|[:=;,])"
+#  STRING AND CHARACTER
+color brightyellow  ""[^"]*""  "'.'"  """
+#  COMMENT / HIDDEN CODE
+color brightcyan "(^[[:space:]]*--.*$)"  "(--([^"]*|([^"]*["][^"]*["][^"]*)*)$)"
+#  TRAILING SPACE
+color ,green "[[:space:]]+$"
+#  MEANINGFUL SPACE
+color brightwhite, "^[[:space:]]+"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
