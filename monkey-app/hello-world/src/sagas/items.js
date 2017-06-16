@@ -16,7 +16,7 @@ export function* createItem(action) { // eslint-disable-line import/prefer-defau
 
 export function* updateItem(action) { // eslint-disable-line import/
   try {
-    const item = yield.call(itemsApi.updateItemPromise, action.item);
+    const item = yield call(itemsApi.updateItemPromise, action.item);
   } catch (err) {
     console.log(err);
   }

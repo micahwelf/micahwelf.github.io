@@ -9,7 +9,6 @@ const propTypes = {
 const defaultProps = {
    items:[],
 };
-
 class HomeView extends Component {
    state = {
       currentItem: this.props.items[0],

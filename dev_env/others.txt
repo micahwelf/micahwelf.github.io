@@ -3,3 +3,7 @@ https://atom.io/
 https://code.visualstudio.com/
 
 
+###  Instructor's Code  ###
+git@bitbucket.org:goodpickleball/codeschool-by-day.git
+
+
