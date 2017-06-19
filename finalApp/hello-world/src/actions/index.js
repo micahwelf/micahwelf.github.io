@@ -1,4 +1,0 @@
-export const ITEM_CREATE_REQ = 'ITEM_CREATE_REQ';
-export const ITEM_CREATE_RES = 'ITEM_CREATE_RES';
-export const ITEM_UPDATE_REQ = 'ITEM_UPDATE_REQ';
-export const ITEM_UPDATE_RES = 'ITEM_UPDATE_RES';
