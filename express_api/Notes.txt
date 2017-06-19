@@ -1,0 +1,24 @@
+HTTP Header:
+	Request:
+		Accept: <mime-type>
+	Response:
+		Content-Type: <mime-type>; charset=<charset>
+
+
+### Items
+index    -> GET    /items      200 ( Success code)
+show     -> GET    /items/<id> 200 ( Success code)
+create   -> POST   /items      201 ( Successful Creation code)
+update   -> UPDATE /items/<id> 204 ( No Content code)
+destroy  -> DELETE /itmes/<id> 204 ( No Content code)
+
+other HTTP Response Codes:
+ 301 -> Redirect
+ 404 -> Not Found
+ 500 -> Internal Server Error
+
+
+Other Related Tools and Topics: 
+
+GraphQL new thing related to REST (we are using REST/RESTful)
+Postman, free tool similar to paid application, Paw

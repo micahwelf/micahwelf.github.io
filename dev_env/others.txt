@@ -7,3 +7,5 @@ https://code.visualstudio.com/
 git@bitbucket.org:goodpickleball/codeschool-by-day.git
 
 
+###  URL for Mongo DB - class project ###
+mongodb.cs.dixie.edu
