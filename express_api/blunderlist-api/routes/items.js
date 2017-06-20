@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const item = require('../models/item')
+
 
 // Index
 router.get('/items', function (req, res) {
@@ -13,11 +15,11 @@ router.get('/items', function (req, res) {
 
 // Show
 
-router.get('/itmes/:id', function (req, res) {
-   res.json({
-      "Items Show": req.params
-   })
-})
+// router.get('/itmes/:id', function (req, res) {
+//    res.json({
+//       "Items Show": req.params
+//    })
+// })
 
 // Create
 

@@ -1,16 +1,22 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const item = new Schema({
-	id: UUID,
+const itemSchema = new Schema({
+	//  id: UUID,   -- unnecessary
 	name: {
 		type: String,
 		min: [3, 'Name not long enough.'],
 		required: [true, "Name is required."],
 		max: [50, 'Name is too long.']
 	},
-	groupId: Schema.Types.ObjectId,
-	completed: Boolean
+	groupId: {
+		type: Schema.Types.ObjectId,
+		required: [true, 'An Item needs a group.']
+	},
+	completed: {
+		type: Boolean,
+		default: false
+	}
 })
 
-module.exports = item
+module.exports = mongoose.model('item', itemSchema)

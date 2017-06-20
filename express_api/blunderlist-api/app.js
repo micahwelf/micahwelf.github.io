@@ -1,11 +1,38 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
+
 const items = require('./routes/items')
 const groups = require('./routes/groups')
 
-app.get('/', function (req, res) {
+
+// My local database:  run mongod
+mongoose.connect('mongodb://localhost/MicahWaddoups')
+// Kaden's Database
+//mongoose.connect('mongodb://144.38.175.196/MicahWaddoups')
+// DJ's Database
+//mongoose.connect('mongodb://mongodb.cs.dixie.edu/MicahWaddoups')
+
+
+
+
+
+app.use(bodyParser.urlencoded({extended: true }))
+app.use(bodyParser.json())
+
+
+
+
+// app.get('/', function (req, res) {
+//    // res.send ('Hello World');
+//    // res.json ('Hello World');
+//    res.json (req.body);
+// });
+app.post('/', function (req, res) {
    // res.send ('Hello World');
-   res.json ('Hello World');
+   // res.json ('Hello World');
+   res.json (req.body);
 });
 
 app.get('/hello/:id', function (req, res) {
