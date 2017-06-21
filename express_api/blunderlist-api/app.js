@@ -18,11 +18,21 @@ mongoose.connect('mongodb://localhost/MicahWaddoups')
 
 
 
-app.use(bodyParser.urlencoded({extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
-
-
+const myLogger(req, res, next){
+	console.log('Logged a Request')
+	console.log(req, res)
+	// next()
+	if (isUserAuthenticated) {
+		next()
+	} else {
+		res.status(401)
+		res.json("Unauthorized")
+	}
+}
+app.use(myLogger)
 
 // app.get('/', function (req, res) {
 //    // res.send ('Hello World');
@@ -30,18 +40,18 @@ app.use(bodyParser.json())
 //    res.json (req.body);
 // });
 app.post('/', function (req, res) {
-   // res.send ('Hello World');
-   // res.json ('Hello World');
-   res.json (req.body);
+	// res.send ('Hello World');
+	// res.json ('Hello World');
+	res.json(req.body);
 });
 
 app.get('/hello/:id', function (req, res) {
-   res.json('Hello, ' + req.params['id']);
+	res.json('Hello, ' + req.params['id']);
 })
 
 // Example only: 
 app.get('/groups/:id/items', function (req, res) {
-   res.json('Items: ' + req.params['id']);
+	res.json('Items: ' + req.params['id']);
 })
 
 //  nesting:  requests made to everything in items.js are
@@ -52,6 +62,6 @@ app.use('/', items)
 
 app.use('/', groups)
 
-app.listen(3000, function() {
-   console.log('BlunderList API listening on port 3000!');
+app.listen(3000, function () {
+	console.log('BlunderList API listening on port 3000!');
 })

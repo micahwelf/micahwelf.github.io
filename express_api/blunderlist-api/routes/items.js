@@ -31,22 +31,37 @@ router.get('/items/:id', function (req, res) {
 //    })
 // })
 
-// Create
 
+
+
+// Teachers:
 router.post('/items', function (req, res) {
 	const item = new Item({
 		name: req.body.name,
-		groupId: ObjectId(req.body.groupId),
+		group: Group.findById(req.body.group),
 		completed: req.body.completed
 	})
-
 	item.save()
 	res.status(201)
 	res.json(item)
-	// res.json({
-	// 	"Item Create": req.params
-	// })
 })
+
+// Create
+
+// router.post('/items', function (req, res) {
+// 	const item = new Item({
+// 		name: req.body.name,
+// 		groupId: ObjectId(req.body.groupId),
+// 		completed: req.body.completed
+// 	})
+
+// 	item.save()
+// 	res.status(201)
+// 	res.json(item)
+// 	// res.json({
+// 	// 	"Item Create": req.params
+// 	// })
+// })
 
 // Update     can be PUT or PATCH  method
 router.put('/items/:id', function (req, res) {
@@ -54,8 +69,8 @@ router.put('/items/:id', function (req, res) {
 		name: req.body.name,
 		groupId: ObjectId(req.body.groupId),
 		completed: req.body.completed
-	}, { new: true }, function (error, item) {
-		res.json(item)
+	}, { new: true, runValidators: true }, function (error, item) {
+		{res.json(item)}
 	})
 	// res.json({
 	// 	"Item Update": req.params

@@ -7,8 +7,8 @@ const itemSchema = new Schema({
 	//  id: UUID,   -- unnecessary
 	name: {
 		type: String,
-		min: [3, 'Name not long enough.'],
-		max: [50, 'Name is too long.'],
+		minlength: [3, 'Name not long enough.'],
+		maxlength: [50, 'Name is too long.'],
 		required: [true, "Name is required."],
 	},
 	groupId: {
@@ -23,5 +23,12 @@ const itemSchema = new Schema({
 		default: false
 	}
 })
+
+
+itemSchema.statics.findByName = function (name, callback) {
+	return this.find({ name: new RegExp(name, 'i') }, callback)
+}
+
+
 
 module.exports = mongoose.model('item', itemSchema)
