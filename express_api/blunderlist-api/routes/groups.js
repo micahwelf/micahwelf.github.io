@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const Group = require('../models/group')
-
+const Item = require('./../models/item')
 
 // Index   method="GET"
 
@@ -21,16 +21,25 @@ router.get('/groups/:id', function (req, res) {
 	Group.findById(req.params.id, function (err, group) {
 		if (err) {
 			if (group == null) {
-				res.status = 404
+				res.status(404)
 				res.send = ""
 			} else {
 				res.json(err)
 			}
-			res.status = 404
+			res.status(404)
 			res.json(err)
 		} else {
 			res.json(group)
 		}
+	})
+})
+
+// Teachers:
+router.post('/items', function (req, res) {
+	const item = new Item({
+		name: req.body.name,
+		group: Group.findById(req.body.group),
+		completed: req.body.completed
 	})
 })
 
@@ -51,26 +60,33 @@ router.post('/groups', function (req, res) {
 //  Teacher's Update:
 
 router.put('/groups/:id', function (req, res) {
-	Group.findById(req.body.id, function (error, group) {
+	Group.findByIdAndUpdate(req.params.id, { name: req.body.name }, function (error, group) {
 		if (error) {
 			res.json(error)
 		} else {
-			if (group == null) {
-				res.status(404)
-				res.json(error, "databose item Not Found")
-			} else {
-				group.name = req.body.name
-				group.save(function (error){
-					if (error){
-						res.json(error)
-
-					} else {
-						res.json("Successfully updated.")
-					}
-				})
-			}
+			// res.status(204)
+			res.json("Group Updated!")
 		}
 	})
+	// Group.findById(req.body.id, function (error, group) {
+	// 	if (error) {
+	// 		res.json(error)
+	// 	} else {
+	// 		if (group == null) {
+	// 			res.status(404)
+	// 			res.json(error, "databose item Not Found")
+	// 		} else {
+	// 			group.name = req.body.name
+	// 			group.save(function (error) {
+	// 				if (error) {
+	// 					res.json(error)
+	// 				} else {
+	// 					res.json("Successfully updated.")
+	// 				}
+	// 			})
+	// 		}
+	// 	}
+	// })
 })
 
 
@@ -81,7 +97,7 @@ router.put('/groups/:id', function (req, res) {
 
 	Group.findById(req.body.id, function (error, group) {
 		if (error) {
-			res.status = 428
+			res.status(428)
 			res.send = "Item ID not found."
 		} else {
 			group.name = newGroup.name
@@ -100,22 +116,28 @@ router.put('/groups/:id', function (req, res) {
 
 
 // Teacher's Destroy
-
-router.delete('/groups/:id', function (req,res){
-	Group.findById(req.params.id, function (error, group){
-		if (error){
+router.delete('/groups/:id', function (req, res) {
+	Group.findByIdAndRemove(req.params.id, function (error, group) {
+		if (error) {
 			res.json(error)
 		} else {
-			if (!group) {
-				res.status(404)
-				res.json({"Error": "ID not found"})
-
-			} else {
-				group.remove()
-				res.json("Successfully deleted")
-			}
+			res.json(group)
 		}
 	})
+	// Group.findById(req.params.id, function (error, group) {
+	// 	if (error) {
+	// 		res.json(error)
+	// 	} else {
+	// 		if (!group) {
+	// 			res.status(404)
+	// 			res.json({ "Error": "ID not found" })
+
+	// 		} else {
+	// 			group.remove()
+	// 			res.json("Successfully deleted")
+	// 		}
+	// 	}
+	// })
 })
 
 // router.get('/groups', function (req, res) {
@@ -168,5 +190,22 @@ router.delete('/groups/:id', function (req, res) {
 		"Group Destroy": req.params["id"]
 	})
 })
+
+
+router.get('/groups/:id;/items', function (req, res) {
+	Item.find({ groupId: req.params.id }, function (error, items) {
+		res.json(items)
+	})
+})
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router
