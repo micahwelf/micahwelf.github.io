@@ -1,146 +1,169 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Code School Projects</title>
 	<style>
-	html { height: 100%; }
-	h1, h2, p {
-		margin: 0;
-	}
+		html {
+			height: 100%;
+		}
 
-	body {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		h1,
+		h2,
+		p {
+			margin: 0;
+		}
 
-		height: 100%;
-		overflow: hidden;
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-		/*background: rgb(190,240,190);*/
-		background-color: magenta;
-	}
+			height: 100%;
+			overflow: hidden;
 
-	.box {
-		background-color: rgb(240, 240, 240);
-		border: 1px solid black;
+			/*background: rgb(190,240,190);*/
+			background-color: magenta;
+		}
 
-		width: 55%;
+		.box {
+			background-color: rgb(240, 240, 240);
+			border: 1px solid black;
 
-		margin-bottom: 1rem; /* put it up a bit */
-		padding: .75rem 1rem;
+			width: 55%;
 
-		z-index: 30;
-	}
+			margin-bottom: 1rem;
+			/* put it up a bit */
+			padding: .75rem 1rem;
 
-	header {
-		text-align: center;
+			z-index: 30;
+		}
 
-		border-bottom: 1px solid black;
+		header {
+			text-align: center;
 
-		padding-bottom: 0.5rem;
-		margin-bottom: 1.5rem;
-	}
+			border-bottom: 1px solid black;
 
-	header h1 {
-		margin-bottom: .5rem;
-		font-size: 2.2rem;
-	}
+			padding-bottom: 0.5rem;
+			margin-bottom: 1.5rem;
+		}
 
-	.menu h2 {
-		border: 1px solid black;
-		display: block;
-		background-color: rgb(235, 235, 235);
-		font-size: 1.4rem;
-		padding: 0.5rem 0.5rem;
-	}
+		header h1 {
+			margin-bottom: .5rem;
+			font-size: 2.2rem;
+		}
 
-	.menu {
-		display: flex;
-		flex-direction:column;
-		position: relative;
-	}
-	.menu * {
-		overflow: visible;
-		width: auto;
-		max-height: 100vh;
-		max-width: 100vw;
-	}
-	.menu, h2, section {
-		transition: top,height,visibility 0.9s;
-	}
-	.menu > h2+section {
-		position: absolute;
-		height: .01rem;
-		visibility: hidden;
-		overflow-x: visible;
-		padding: 1rem;
-		top: 0.5rem;
-		left: 0.5rem;
-	}
-	.menu:hover > h2 + section, .menu:focus > h2 + section, .menu:active > h2 + section,
-	.menu > h2 + section:hover, .menu > h2 + section:focus, .menu > h2 + section:active {
-		position: absolute;
-		top: -2rem;
-		left: 3rem;
-		z-index: 5;
-		overflow-y: visible;
-		overflow-x: visible;
-		min-height: 14rem;
-		max-height: 100vh;
-		visibility: visible;
-	}
-	.menu p, .menu h2 {
-		display: flex;
-		flex-direction: row;
-		background: rgba(100,100,100, 0.9);
-		height: 2rem;
-	}
-	.menu p:hover {
-		z-index: 10;
-		background: rgb(230,255,230);
-	}
-	.menu:hover {
-		z-index: 10;
-	}
-	.menu section {
-		display: flex;
-		flex-direction: column;
-		padding-left: .5rem;
-		padding-bottom: .5rem;
-		background: rgba(100,100,100, 0.6);
-		border: 1pt solid black;
-		min-width: 40vw;
-		min-height: auto;
-	}
+		.menu h2 {
+			border: 1px solid black;
+			display: block;
+			background-color: rgb(235, 235, 235);
+			font-size: 1.4rem;
+			padding: 0.5rem 0.5rem;
+		}
 
-	.menu section p {
-		padding-bottom: 0.5rem;
-		font-size: 1.4rem;
-	}
+		.menu {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+		}
 
-	.menu section a {
-		text-decoration: none;
-	}
+		.menu * {
+			overflow: visible;
+			width: auto;
+			max-height: 100vh;
+			max-width: 100vw;
+		}
 
-	.frog {
-		position: absolute;
-		background-image: url("http://www.pinkfrogservices.com/wp-content/uploads/2016/12/pinkfrog3d_wavingfinal001-LARGE-CLEAR.png");
-		background-size: contain;
-		min-width: 17.5rem;
-		min-height: 13.125rem;
+		.menu,
+		h2,
+		section {
+			transition: top, height, visibility 0.9s;
+		}
 
-		-moz-transform: scaleY(-1);
-		-o-transform: scaleY(-1);
-		-webkit-transform: scaleY(-1);
-		transform: scaleY(-1);
-		filter: FlipV;
-		-ms-filter: "FlipV";
+		.menu>h2+section {
+			position: absolute;
+			height: .01rem;
+			visibility: hidden;
+			overflow-x: visible;
+			padding: 1rem;
+			top: 0.5rem;
+			left: 0.5rem;
+		}
 
-		z-index: 0;
-	}
+		.menu:hover>h2+section,
+		.menu:focus>h2+section,
+		.menu:active>h2+section,
+		.menu>h2+section:hover,
+		.menu>h2+section:focus,
+		.menu>h2+section:active {
+			position: absolute;
+			top: -2rem;
+			left: 3rem;
+			z-index: 5;
+			overflow-y: visible;
+			overflow-x: visible;
+			min-height: 14rem;
+			max-height: 100vh;
+			visibility: visible;
+		}
+
+		.menu p,
+		.menu h2 {
+			display: flex;
+			flex-direction: row;
+			background: rgba(100, 100, 100, 0.9);
+			height: 2rem;
+		}
+
+		.menu p:hover {
+			z-index: 10;
+			background: rgb(230, 255, 230);
+		}
+
+		.menu:hover {
+			z-index: 10;
+		}
+
+		.menu section {
+			display: flex;
+			flex-direction: column;
+			padding-left: .5rem;
+			padding-bottom: .5rem;
+			background: rgba(100, 100, 100, 0.6);
+			border: 1pt solid black;
+			min-width: 40vw;
+			min-height: auto;
+		}
+
+		.menu section p {
+			padding-bottom: 0.5rem;
+			font-size: 1.4rem;
+		}
+
+		.menu section a {
+			text-decoration: none;
+		}
+
+		.frog {
+			position: absolute;
+			background-image: url("http://www.pinkfrogservices.com/wp-content/uploads/2016/12/pinkfrog3d_wavingfinal001-LARGE-CLEAR.png");
+			background-size: contain;
+			min-width: 17.5rem;
+			min-height: 13.125rem;
+
+			-moz-transform: scaleY(-1);
+			-o-transform: scaleY(-1);
+			-webkit-transform: scaleY(-1);
+			transform: scaleY(-1);
+			filter: FlipV;
+			-ms-filter: "FlipV";
+
+			z-index: 0;
+		}
 	</style>
 </head>
+
 <body>
 	<div class="box">
 		<header>
@@ -157,7 +180,7 @@
 						<p><a href="zen_garden/">Zen Garden Stylesheets</a></p>
 					</section>
 				</span>
-			</section>
+		</section>
 		</span>
 		<br>
 		<span class="menu">
@@ -169,7 +192,7 @@
 						<p><a href="movie_page/">Favorite Movie(s)</a></p>
 					</section>
 				</span>
-				<span class="menu">
+		<span class="menu">
 					<h2>Week 2</h2>
 					<section>
 						<p><a href="mathquiz/">Math Quiz (JS)</a></p>
@@ -177,49 +200,50 @@
 						<p><a href="2048/">2048 Game (JS)</a></p>
 					</section>
 				</span>
-				<span class="menu">
-					<h2>Week 3</h2>
+		<span class="menu">
+				<h2>Week 3</h2>
+					<section>
+						<p><a href="localhost:3000/">Local React Server</a></p>
+
+					</section>
+		</span>
+		<span class="menu">
+				<h2>Week 4</h2>
+					<section>
+						<p><a href="localhost:3000/">Local Express Server</a></p>
+					</section>
+				</span>
+		<span class="menu">
+				<h2>Week 5</h2>
 					<section>
 
 					</section>
 				</span>
-				<span class="menu">
-					<h2>Week 4</h2>
-					<section>
-
-					</section>
-				</span>
-				<span class="menu">
-					<h2>Week 5</h2>
-					<section>
-
-					</section>
-				</span>
-				<span class="menu">
+		<span class="menu">
 					<h2>Week 6</h2>
 					<section>
 
 					</section>
 				</span>
-				<span class="menu">
+		<span class="menu">
 					<h2>Week 7</h2>
 					<section>
 
 					</section>
 				</span>
-				<span class="menu">
+		<span class="menu">
 					<h2>Week 8</h2>
 					<section>
 
 					</section>
 				</span>
-				<span class="menu">
+		<span class="menu">
 					<h2>Week 9</h2>
 					<section>
 
 					</section>
 				</span>
-			</section>
+		</section>
 		</span>
 	</div>
 
@@ -239,25 +263,25 @@
 	<div class="frog"></div>
 
 	<script>
-	for (let frog of document.getElementsByClassName("frog")) {
-		frog.style.left = `${Math.random() * window.innerWidth}px`;
-		frog.fallPos = -200 - (Math.random() * 100000) / 100;
-		frog.style.top = `${frog.fallPos}px`;
-	}
+		for (let frog of document.getElementsByClassName("frog")) {
+			frog.style.left = `${Math.random() * window.innerWidth}px`;
+			frog.fallPos = -200 - (Math.random() * 100000) / 100;
+			frog.style.top = `${frog.fallPos}px`;
+		}
 
-	window.setTimeout(function() {
-		window.setInterval(function() {
-			for (let frog of document.getElementsByClassName("frog")) {
-				frog.fallPos += 1;
+		window.setTimeout(function () {
+			window.setInterval(function () {
+				for (let frog of document.getElementsByClassName("frog")) {
+					frog.fallPos += 1;
 
-				if (frog.fallPos > window.innerHeight) {
-					frog.fallPos = -300;
-					frog.style.left = `${Math.random() * window.innerWidth}px`;
+					if (frog.fallPos > window.innerHeight) {
+						frog.fallPos = -300;
+						frog.style.left = `${Math.random() * window.innerWidth}px`;
+					}
+
+					frog.style.top = `${frog.fallPos}px`;
 				}
-
-				frog.style.top = `${frog.fallPos}px`;
-			}
-		}, 5);
-	}, 3000);
+			}, 5);
+		}, 3000);
 	</script>
 </body>

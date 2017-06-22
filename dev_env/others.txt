@@ -7,5 +7,24 @@ https://code.visualstudio.com/
 git@bitbucket.org:goodpickleball/codeschool-by-day.git
 
 
+###  Other Instructor's Code  ###
+git@github.com:kdawgwilk/Blunderlist-API.git
+tinyurl.com/y8lyu6dg
+	Side Note:
+	express may use jade and handlbars and pug for static view rendering
+	user athentication will use passportjs ( passportjs.org )
+		start with basic-auth   (later use google-auth)
+			format notes:
+			Authorization: Basic ***
+			*** ::= base64 of username:password
+			alternates: Bearer, OAuth 1.0, OAuth 2.0, OAuthEcho
+			                               (google)   (twitter)
+			
+	
+	
+
+
 ###  URL for Mongo DB - class project ###
 mongodb.cs.dixie.edu
+
+
