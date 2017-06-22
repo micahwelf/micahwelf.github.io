@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+function testreq {
+	if [[ -n 
+	local method=$1
+	shift
+	local urlpath=$1
+	shift
+	local data="$*"
+	argv=()
+	local -a curlParams
+	curlParams=(
+		-X ${(U)method}
+		-H 'Content-Type: application/json'
+		-H 'Accept: application/json'
+		--data ${data}
+		http://localhost:3000${urlpath}
+	)
+	curl $curlParams
+	
+}
+
+testreq "$@"
