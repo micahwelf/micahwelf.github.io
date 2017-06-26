@@ -1,0 +1,28 @@
+=== Lecture Monday
++ Ramp
+
+== Tue
++ Create
+
+== Wed
++ Update
+
+== Thu
++ Create-Class
+
+== Fri
++ Create-Class
+
+
+=== Hurdles
++ material-ui
++ fetch -> integrate
++ API changes
+  + sign-in sign-out
+  +
+  +
++ Delete
++ Routing
++ Update
+
+

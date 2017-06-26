@@ -1,0 +1,17 @@
+Conventtion: Language call layout:
+
+Actions: 
+ "ITEM_CREATE_REQ" -> dispatched -> Redux 
+                                          \-> Sagas 
+                                                      \-> item = createItem(Promise)
+                                                         RES  -- (This is where errors are handled
+
+REST guidelines
+
+
+
+
+syntax:  [...stat, action.itom];  is  like:
+   [[one, two, three], four, five, six];
+   that-is, it returns the result of appending the value(s) to the first stated
+   array.
