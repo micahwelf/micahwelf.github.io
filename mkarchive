@@ -1,0 +1,9 @@
+#!/bin/zsh
+function report_list {
+	emulate -LR zsh -o extendedglob -o nullglob -o dvorak
+	local -a files dirs
+	files=( *(.) .*(.) )
+	dirs=( *(/) .*(/) )
+	foreach dirs ()
+	end
+}

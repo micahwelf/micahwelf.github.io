@@ -5,13 +5,14 @@ function start_app {
 	trap 'false' INT ZERROR EXIT
 	mongod --dbpath ./data/db &
 	local mongo_ip=$!
-	sleep 1s
-	while true
-	do
-		read -t 5 response?'Type exit <enter> to exit testing script.' || :
-		if [[ $response == "exit" ]] break
-		node app.js
-	done
+#	sleep 1s
+#	while true
+#	do
+#		read -t 5 response?'Type exit <enter> to exit testing script.' || :
+#		if [[ $response == "exit" ]] break
+#		node app.js
+#	done
+	wait
 	kill $mongo_ip
 }
 
