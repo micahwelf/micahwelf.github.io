@@ -6,3 +6,12 @@ body {
     align-items: center;
     background: palegreen;
 } 
+
+.option-box {
+    position:relative;
+    top:0em;
+    background: paleturquoise;
+}
+.option-box:hover {
+    bottom: 5em;
+}
