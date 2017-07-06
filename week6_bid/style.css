@@ -5,13 +5,16 @@ body {
     flex-direction: column;
     align-items: center;
     background: palegreen;
-} 
-
-.option-box {
-    position:relative;
-    top:0em;
-    background: paleturquoise;
 }
-.option-box:hover {
+
+span.option-box {
+    position: relative;
+    top: 0em;
+}
+
+span.option-box:hover {
+    position: relative;
+    top: 0em;
     bottom: 5em;
+    background: paleturquoise;
 }
