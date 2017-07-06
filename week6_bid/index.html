@@ -1,22 +1,25 @@
 <html>
-    <head>
-        <title>FFmpeg Composer</title>
-        <link type="text/css" rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <h1>FFmpeg Composer</h1>
-        <p>
-            <span class="command">ffmpeg</span>
-            <span class="global-option">-v</span>
-            <span class="global-option-value">error</span>
-            <span class="filter-option">-filter_complex</span>
-            &apos;<span class="filter">fade=</span><span 
-            class="filter-sub">type=</span><span
-            class="filter-sub-value">in</span>:</span><span 
-            class="filter-sub">start_time=</span><span
-            class="filter-sub-value">3</span>span 
-            class="filter-sub">duration=</span><span
-            class="filter-sub-value">4</span>
-        </p>
-    </body>
+
+<head>
+    <title>FFmpeg Composer</title>
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>FFmpeg Composer</h1>
+    <p>
+        <span class="command">ffmpeg</span>
+        <span class="global-option">-v</span>
+        <span class="global-option-value">error</span>
+        <span class="filter-option">-filter_complex</span> &apos;
+        <span class="filter">scale=</span><span class="filter-sub">w=</span><span class="filter-sub-value">300</span>:</span>
+        <span class="filter-sub">h=</span><span class="filter-sub-value">256</span>;
+        <span class="option-box">
+            <span class="filter">fade=</span><span class="filter-sub">type=</span><span class="filter-sub-value">in</span>:
+        <span
+            class="filter-sub">start_time=</span><span class="filter-sub-value">3</span><span class="filter-sub">duration=</span>
+            <span class="filter-sub-value">4</span> &apos;
+    </p>
+</body>
+
 </html>
