@@ -8,13 +8,17 @@ body {
 }
 
 span.option-box {
+    display: inline-flex;
+    flex-direction: column;
+    height: 1ex;
     position: relative;
-    top: 0em;
+    top: 0ex;
 }
 
 span.option-box:hover {
+    height: 5ex;
     position: relative;
-    top: 0em;
-    bottom: 5em;
+    top: 0ex;
+    bottom: 5ex;
     background: paleturquoise;
 }
