@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+
+mongod --datadir db &
+
+sleep 3s
+
+node app.js
+

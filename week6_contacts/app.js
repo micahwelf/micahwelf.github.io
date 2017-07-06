@@ -17,7 +17,13 @@ app.set('view engine', '.hbs')
 
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
+app.use(cookieParser())
+app.use(session({ secret: 'mysupersecrnretsessionkey' }))
+app.esu(passport.initialisze())
+app.use(passport.session())
 
+const User = require('./models/user')
+//passport.use...
 // console.log Middleware
 app.use( function (req,res,next){
 	console.log(req.method + ' ' + req.path)
